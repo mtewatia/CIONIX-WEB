@@ -16,11 +16,11 @@ const Footer = () => {
         <div className="py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
             <Link to="/" className="font-heading font-bold text-2xl mb-6 block">
-              <span className="text-white">Growth</span>
-              <span className="text-ryse-orange">Forge</span>
+              <span className="text-white">Nexora</span>
+              <span className="text-ryse-orange"> Global</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              A next-generation growth agency blending AI, creativity, and strategy to help brands scale.
+              A multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-1">
-            <h4 className="font-heading font-bold text-lg mb-6">Our Services</h4>
+            <h4 className="font-heading font-bold text-lg mb-6">Our Sectors</h4>
             <ul className="space-y-3">
               {services.slice(0, 6).map((service) => (
                 <li key={service.id}>
@@ -65,11 +65,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="font-heading font-bold text-lg mb-6">Contact Us</h4>
             <div className="space-y-4">
-              <a href="mailto:hello@growthforge.com" className="flex items-center gap-3 text-white/60 hover:text-ryse-orange transition-colors">
+              <a href="mailto:hello@nexoraglobal.com" className="flex items-center gap-3 text-white/60 hover:text-ryse-orange transition-colors">
                 <div className="w-10 h-10 rounded-full bg-ryse-orange/20 flex items-center justify-center">
                   <Mail className="h-4 w-4 text-ryse-orange" />
                 </div>
-                <span className="text-sm">hello@growthforge.com</span>
+                <span className="text-sm">hello@nexoraglobal.com</span>
               </a>
               <a href="tel:+1234567890" className="flex items-center gap-3 text-white/60 hover:text-ryse-orange transition-colors">
                 <div className="w-10 h-10 rounded-full bg-ryse-orange/20 flex items-center justify-center">
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
 
         <div className="py-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/50">© {new Date().getFullYear()} GrowthForge. All rights reserved.</p>
+          <p className="text-sm text-white/50">© {new Date().getFullYear()} Nexora Global. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link to="/privacy-policy" className="text-sm text-white/50 hover:text-ryse-orange transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-sm text-white/50 hover:text-ryse-orange transition-colors">Terms of Service</Link>

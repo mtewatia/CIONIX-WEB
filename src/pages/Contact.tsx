@@ -31,8 +31,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      value: "hello@growthforge.com",
-      href: "mailto:hello@growthforge.com"
+      value: "hello@nexoraglobal.com",
+      href: "mailto:hello@nexoraglobal.com"
     },
     {
       icon: Phone,
@@ -60,7 +60,7 @@ const Contact = () => {
       
       <PageHeader
         title="Contact Us"
-        subtitle="Have a project in mind? Let's discuss how we can help accelerate your growth."
+        subtitle="Have a project in mind? Let's discuss how Nexora Global can help across any sector."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" }

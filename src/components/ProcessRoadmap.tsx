@@ -5,29 +5,29 @@ const steps = [
   {
     number: "01",
     icon: Compass,
-    title: "Signal Discovery & Growth Alignment",
-    description: "We identify the highest-impact growth signals by analyzing your positioning, channels, and competitive landscape — aligned to your stage and goals.",
+    title: "Discovery & Consultation",
+    description: "We understand your industry, goals, and challenges through in-depth consultation — whether it's a property deal, tech project, media campaign, or healthcare operation.",
     gradient: "from-primary to-orange-400",
   },
   {
     number: "02",
     icon: Target,
-    title: "Priority Setting & Rapid Activation",
-    description: "Clear success metrics, focused priorities, and fast execution to create early momentum and learn quickly.",
+    title: "Strategy & Planning",
+    description: "Our sector specialists craft a tailored roadmap with clear milestones, deliverables, and KPIs aligned to your business objectives.",
     gradient: "from-accent to-purple-500",
   },
   {
     number: "03",
     icon: Layers,
-    title: "Scalable Systems & Growth Blueprint",
-    description: "We design repeatable frameworks and roadmaps that scale predictably and compound results over time.",
+    title: "Execution & Delivery",
+    description: "Dedicated teams execute with precision — from development sprints and billing cycles to production shoots and property assessments.",
     gradient: "from-emerald-500 to-teal-500",
   },
   {
     number: "04",
     icon: BarChart3,
-    title: "Performance Visibility & Optimization",
-    description: "Transparent reporting, shared dashboards, and continuous refinement to keep growth on track.",
+    title: "Growth & Optimization",
+    description: "We continuously measure, optimize, and scale outcomes across every sector to ensure long-term success and ROI.",
     gradient: "from-blue-500 to-indigo-500",
   },
 ];
@@ -62,29 +62,25 @@ const ProcessRoadmap = () => {
 
   return (
     <section className="section-padding bg-background relative overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container-custom relative">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-medium text-sm uppercase tracking-wider mb-4">
-            Our Process
+            How We Work
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-foreground">
-            Optimized for <span className="gradient-text">Immediate Results</span>
+            Our Proven <span className="gradient-text">Process</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            & Long-term Success. A strategic journey designed to transform your growth trajectory.
+            A consistent framework applied across every sector for predictable, scalable results.
           </p>
         </div>
 
-        {/* Timeline Container */}
         <div className="relative">
-          {/* Vertical Connection Line - Desktop */}
           <div className="hidden lg:block absolute left-[60px] top-0 bottom-0 w-1 bg-muted/50 rounded-full">
             <div 
               className="w-full bg-gradient-to-b from-primary via-accent to-emerald-500 rounded-full transition-all duration-700 ease-out"
@@ -94,7 +90,6 @@ const ProcessRoadmap = () => {
             />
           </div>
 
-          {/* Steps */}
           <div className="space-y-8 lg:space-y-12">
             {steps.map((step, index) => {
               const isActive = index <= activeStep;
@@ -110,9 +105,7 @@ const ProcessRoadmap = () => {
                     ${isActive ? "opacity-100 translate-y-0" : "opacity-40 translate-y-4"}
                   `}
                 >
-                  {/* Step Number & Icon */}
                   <div className="flex items-start gap-4 lg:flex-col lg:items-center lg:w-[120px] shrink-0">
-                    {/* Icon Circle */}
                     <div
                       className={`
                         relative w-16 h-16 lg:w-[120px] lg:h-[120px] rounded-2xl lg:rounded-3xl
@@ -130,8 +123,6 @@ const ProcessRoadmap = () => {
                           ${isActive ? "text-white" : "text-muted-foreground"}
                         `} 
                       />
-                      
-                      {/* Step Number Badge */}
                       <div 
                         className={`
                           absolute -top-2 -right-2 lg:-top-3 lg:-right-3
@@ -147,8 +138,6 @@ const ProcessRoadmap = () => {
                       >
                         {step.number}
                       </div>
-
-                      {/* Glow Effect */}
                       {isActive && (
                         <div 
                           className={`absolute inset-0 rounded-2xl lg:rounded-3xl bg-gradient-to-br ${step.gradient} opacity-30 blur-xl -z-10`} 
@@ -157,7 +146,6 @@ const ProcessRoadmap = () => {
                     </div>
                   </div>
 
-                  {/* Content Card */}
                   <div
                     className={`
                       flex-1 p-6 lg:p-8 rounded-2xl lg:rounded-3xl
@@ -177,8 +165,6 @@ const ProcessRoadmap = () => {
                     >
                       {step.title}
                     </h3>
-                    
-                    {/* Gradient Underline */}
                     <div 
                       className={`
                         h-1 rounded-full mb-4 transition-all duration-500
@@ -188,7 +174,6 @@ const ProcessRoadmap = () => {
                         }
                       `}
                     />
-                    
                     <p
                       className={`
                         text-base lg:text-lg leading-relaxed

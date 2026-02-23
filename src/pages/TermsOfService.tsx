@@ -27,7 +27,7 @@ const TermsOfService = () => {
           ">
             <h2>1. Agreement to Terms</h2>
             <p>
-              By accessing or using GrowthForge's website and services, you agree to be bound 
+              By accessing or using Nexora Global's website and services, you agree to be bound 
               by these Terms of Service and all applicable laws and regulations. If you do not 
               agree with any of these terms, you are prohibited from using our services.
             </p>
@@ -64,7 +64,7 @@ const TermsOfService = () => {
             <h3>Our Property</h3>
             <p>
               All content, features, and functionality of our website and services, including 
-              but not limited to text, graphics, logos, and software, are owned by GrowthForge 
+              but not limited to text, graphics, logos, and software, are owned by Nexora Global 
               and protected by intellectual property laws.
             </p>
             <h3>Client Materials</h3>
@@ -87,7 +87,7 @@ const TermsOfService = () => {
 
             <h2>7. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, GrowthForge shall not be liable for any 
+              To the maximum extent permitted by law, Nexora Global shall not be liable for any 
               indirect, incidental, special, consequential, or punitive damages, including but 
               not limited to loss of profits, data, or other intangible losses.
             </p>
@@ -105,7 +105,7 @@ const TermsOfService = () => {
 
             <h2>9. Indemnification</h2>
             <p>
-              You agree to indemnify and hold harmless GrowthForge and its employees from any 
+              You agree to indemnify and hold harmless Nexora Global and its employees from any 
               claims, damages, or expenses arising from your use of our services or violation 
               of these terms.
             </p>
@@ -144,7 +144,7 @@ const TermsOfService = () => {
             <h2>14. Contact Information</h2>
             <p>For questions about these Terms of Service, please contact us at:</p>
             <ul>
-              <li>Email: legal@growthforge.com</li>
+              <li>Email: legal@nexoraglobal.com</li>
               <li>Address: San Francisco, CA</li>
             </ul>
           </div>

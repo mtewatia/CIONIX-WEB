@@ -6,7 +6,7 @@ import { services } from "@/data/services";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "#services", hasDropdown: true },
+  { name: "Sectors", href: "#services", hasDropdown: true },
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
   { name: "Blog", href: "/blog" },
@@ -35,8 +35,8 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to="/" className="font-heading font-bold text-2xl">
-            <span className={isScrolled ? "text-ryse-dark" : "text-white"}>Growth</span>
-            <span className="text-ryse-orange">Forge</span>
+            <span className={isScrolled ? "text-ryse-dark" : "text-white"}>Nexora</span>
+            <span className="text-ryse-orange"> Global</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

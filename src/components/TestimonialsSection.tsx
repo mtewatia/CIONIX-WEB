@@ -3,24 +3,24 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Working with this team transformed how we approach digital growth. Their SEO strategies put us ahead of competitors we'd been chasing for years. The results speak for themselves.",
-    name: "Sarah Chen",
-    role: "CEO & Founder",
-    company: "TechVenture Labs",
+    quote: "Nexora Global handled our property consulting and built our investment portal — all under one roof. The seamless coordination between teams saved us months of work.",
+    name: "Ahmed Al-Rashid",
+    role: "CEO",
+    company: "Gulf Properties Group",
     rating: 5,
   },
   {
-    quote: "The video content they produced didn't just look amazing — it converted. We saw a 300% increase in engagement within the first month. They truly understand what moves audiences.",
-    name: "Marcus Johnson",
-    role: "Head of Marketing",
-    company: "NovaBrand Co.",
+    quote: "Their medical billing team transformed our revenue cycle. We went from 60% claim acceptance to over 95%. The healthcare division at Nexora truly understands the US medical system.",
+    name: "Dr. Sarah Mitchell",
+    role: "Practice Owner",
+    company: "Midwest Family Health",
     rating: 5,
   },
   {
-    quote: "From strategy to execution, they delivered beyond expectations. Our organic traffic grew from 5K to 50K visitors in six months. This team doesn't just talk results — they deliver them.",
-    name: "Elena Rodriguez",
+    quote: "From web development to video production, Nexora Global delivered everything we needed to launch our brand. Their IT and media teams work like a well-oiled machine.",
+    name: "James O'Brien",
     role: "Founder",
-    company: "The Growth Studio",
+    company: "TechWave Studios",
     rating: 5,
   },
 ];
@@ -39,7 +39,6 @@ const TestimonialsSection = () => {
   return (
     <section className="section-padding bg-muted/50">
       <div className="container-custom">
-        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="section-subtitle">Testimonials</p>
           <h2 className="section-title text-foreground">
@@ -47,10 +46,8 @@ const TestimonialsSection = () => {
           </h2>
         </div>
 
-        {/* Testimonial Slider */}
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-ryse-orange hover:text-white transition-all duration-300 z-10"
@@ -64,26 +61,21 @@ const TestimonialsSection = () => {
               <ChevronRight className="h-6 w-6" />
             </button>
 
-            {/* Testimonial Card */}
             <div className="card-ryse p-8 md:p-12 text-center">
-              {/* Quote Icon */}
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-ryse-orange to-ryse-orange-light flex items-center justify-center">
                 <Quote className="h-8 w-8 text-white" />
               </div>
 
-              {/* Rating */}
               <div className="flex justify-center gap-1 mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-ryse-orange fill-current" />
                 ))}
               </div>
 
-              {/* Quote */}
               <blockquote className="text-xl md:text-2xl text-foreground leading-relaxed mb-8 font-medium">
                 "{testimonials[currentIndex].quote}"
               </blockquote>
 
-              {/* Author */}
               <div className="flex items-center justify-center gap-4">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-ryse-dark to-ryse-dark-light flex items-center justify-center text-lg font-bold font-heading text-white">
                   {testimonials[currentIndex].name.split(' ').map(n => n[0]).join('')}
@@ -100,7 +92,6 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Dots */}
           <div className="flex justify-center gap-2 mt-8">
             {testimonials.map((_, index) => (
               <button

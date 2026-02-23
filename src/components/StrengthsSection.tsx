@@ -1,53 +1,51 @@
 const strengths = [
   {
-    number: "10×",
-    label: "Faster Execution Cycles",
-    description: "AI-assisted GEO workflows reduce turnaround from weeks to days.",
+    number: "4",
+    label: "Industry Sectors",
+    description: "Real Estate, IT, Media & Entertainment, and Healthcare — all under one enterprise.",
   },
   {
-    number: "2–4×",
-    label: "Content & Campaign Output",
-    description: "Turn the same effort into significantly higher marketing throughput.",
+    number: "50+",
+    label: "Expert Professionals",
+    description: "Dedicated specialists across every sector delivering world-class solutions.",
   },
   {
     number: "40%",
-    label: "Lower Growth Costs",
-    description: "Replace fragmented vendors with one unified execution engine.",
+    label: "Cost Efficiency",
+    description: "Integrated operations mean lower costs and better outcomes for every project.",
   },
   {
-    number: "5–10",
-    label: "Hours Back Every Week",
-    description: "Less coordination. Fewer approvals. More focus on leadership.",
+    number: "200+",
+    label: "Projects Delivered",
+    description: "Successfully completed projects across all four sectors globally.",
   },
   {
-    number: "25+",
-    label: "Growth Capabilities",
-    description: "From GEO and content to media, events, and distribution.",
+    number: "10+",
+    label: "Countries Served",
+    description: "Clients across North America, Middle East, Europe, and South Asia.",
   },
   {
-    number: "Top",
-    label: "Tier Specialists",
-    description: "Work with vetted operators aligned to performance, not hype.",
+    number: "24/7",
+    label: "Support Coverage",
+    description: "Round-the-clock availability across time zones for all our clients.",
   },
 ];
 
 const StrengthsSection = () => {
   return (
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
-      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-ryse-dark mb-4">
-            Meet the New Generation
+            Why Choose
             <br />
-            <span className="text-ryse-orange">of Digital Marketing Services</span>
+            <span className="text-ryse-orange">Nexora Global?</span>
           </h2>
         </div>
 
-        {/* Strengths Grid - Custom Layout */}
+        {/* Strengths Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Row 1 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {strengths.slice(0, 2).map((strength, index) => (
               <div
@@ -78,7 +76,6 @@ const StrengthsSection = () => {
             </p>
           </div>
 
-          {/* Row 2 */}
           <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:border-ryse-orange/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ryse-orange/10 group">
             <div className="text-4xl md:text-5xl font-bold text-ryse-dark mb-2 group-hover:text-ryse-orange transition-colors">
               {strengths[3].number}

@@ -3,30 +3,29 @@ import { Users, Briefcase, Layers, TrendingUp } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    number: "150+",
-    label: "Happy Clients",
+    number: "200+",
+    label: "Clients Worldwide",
   },
   {
     icon: Briefcase,
     number: "500+",
-    label: "Projects Done",
+    label: "Projects Delivered",
   },
   {
     icon: Layers,
-    number: "30+",
-    label: "Services On Tap",
+    number: "4",
+    label: "Industry Sectors",
   },
   {
     icon: TrendingUp,
     number: "99%",
-    label: "Success Rate",
+    label: "Client Satisfaction",
   },
 ];
 
 const StatsSection = () => {
   return (
     <section className="py-20 bg-gradient-to-r from-ryse-orange to-ryse-orange-light relative overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-60 h-60 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3" />
       

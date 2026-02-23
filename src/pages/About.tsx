@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/layout/PageHeader";
 
 const stats = [
-  { number: "150+", label: "Clients Served" },
-  { number: "98%", label: "Client Retention" },
-  { number: "10x", label: "Average ROI" },
+  { number: "200+", label: "Clients Worldwide" },
+  { number: "4", label: "Industry Sectors" },
+  { number: "10+", label: "Countries Served" },
   { number: "50+", label: "Team Members" }
 ];
 
@@ -65,7 +65,7 @@ const About = () => {
       
       <PageHeader
         title="About Us"
-        subtitle="We're a team of growth obsessives building the future of digital marketing."
+        subtitle="A multi-sector enterprise delivering excellence across Real Estate, IT, Media, and Healthcare."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "About" }
@@ -79,17 +79,17 @@ const About = () => {
             <div>
               <p className="section-subtitle">Our Mission</p>
               <h2 className="section-title text-foreground">
-                Empowering Brands to <span className="gradient-text">Scale Intelligently</span>
+                Driving Excellence Across <span className="gradient-text">Multiple Industries</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                GrowthForge was founded with a simple belief: growth shouldn't be complicated. 
-                We combine cutting-edge AI technology with proven marketing strategies to help 
-                ambitious brands scale faster, smarter, and more sustainably.
+                Nexora Global was founded with a bold vision: to build a multi-sector enterprise 
+                that delivers world-class solutions across Real Estate, IT Services, Video Production 
+                & Entertainment, and Healthcare — each with its own dedicated team and expertise.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Our team of specialists works across every growth lever—from GEO and content 
-                to development and design—delivering integrated solutions that compound results 
-                over time.
+                Our approach is simple — one company, multiple sectors, unified excellence. 
+                Each division operates with specialized knowledge while benefiting from the 
+                synergy of a global enterprise.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -136,7 +136,7 @@ const About = () => {
           <div className="text-center mb-12">
             <p className="section-subtitle">Our Team</p>
             <h2 className="section-title text-foreground">
-              Meet the <span className="gradient-text">Growth Experts</span>
+              Meet the <span className="gradient-text">Leadership Team</span>
             </h2>
           </div>
 

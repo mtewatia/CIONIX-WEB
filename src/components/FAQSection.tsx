@@ -10,36 +10,36 @@ import { ArrowRight } from "lucide-react";
 
 const faqs = [
   {
-    question: "What makes GrowthForge different from other marketing agencies?",
-    answer: "We combine AI-powered workflows with human expertise to deliver results 10x faster than traditional agencies. Our unified approach means you get strategy, execution, and optimization from one team—no fragmented vendors or communication gaps."
+    question: "What sectors does Nexora Global operate in?",
+    answer: "Nexora Global operates across four key sectors: Real Estate Consultancy, IT Services (Web Development, App Development, GEO, Digital Marketing), Video Production & Entertainment (Content Production, YouTube Management), and Healthcare (Medical Billing for USA doctors and healthcare IT)."
+  },
+  {
+    question: "Will each sector have its own dedicated website?",
+    answer: "Yes! Each sector will soon have its own specialized website with in-depth information, case studies, and sector-specific resources. This main site serves as the central hub for Nexora Global's complete offerings."
   },
   {
     question: "What is GEO (Generative Engine Optimization)?",
-    answer: "GEO is the practice of optimizing your content to appear in AI-generated responses from platforms like ChatGPT, Google AI Overviews, and Perplexity. As more users turn to AI for answers, GEO ensures your brand is cited and recommended by these systems."
+    answer: "GEO is the practice of optimizing your content to appear in AI-generated responses from platforms like ChatGPT, Google AI Overviews, and Perplexity. It's part of our IT Services sector and ensures your brand is visible in the AI search ecosystem."
   },
   {
-    question: "How long does it take to see results?",
-    answer: "Most clients see initial momentum within 30-60 days, with significant results by 90 days. Our rapid activation approach focuses on quick wins while building long-term, compounding growth systems."
+    question: "How does your Medical Billing service work?",
+    answer: "Our Healthcare division provides end-to-end medical billing services for USA-based physicians. We handle claims processing, revenue cycle management, compliance, denial management, and reporting — all with HIPAA-compliant processes."
   },
   {
-    question: "Do you work with startups or only established companies?",
-    answer: "We work with companies at all stages—from funded startups to enterprise organizations. Our flexible pricing tiers are designed to scale with your needs, and we tailor our approach based on your stage and goals."
+    question: "Can I engage Nexora Global for services across multiple sectors?",
+    answer: "Absolutely. That's one of our key advantages. Whether you need a website built, a marketing campaign, a property consultation, and medical billing — we handle it all under one roof with dedicated specialists per sector."
   },
   {
-    question: "What's included in your monthly retainer?",
-    answer: "Our retainers include strategy, execution, and optimization across your chosen channels. This covers everything from content production and campaign management to analytics, reporting, and ongoing optimization. No hidden fees or surprise charges."
+    question: "Where is Nexora Global based?",
+    answer: "Nexora Global operates internationally with teams serving clients across North America, the Middle East, Europe, and South Asia. Our distributed model allows us to provide 24/7 support across time zones."
   },
   {
-    question: "Can I start with just one service and expand later?",
-    answer: "Absolutely. Many clients start with a focused engagement—like GEO or content production—and expand as they see results. Our modular approach makes it easy to add channels and capabilities over time."
+    question: "How do I get started with Nexora Global?",
+    answer: "Simply reach out through our contact page or schedule a free consultation. We'll understand your needs, recommend the right sector team, and create a tailored plan for your project."
   },
   {
-    question: "How do you measure and report on performance?",
-    answer: "You'll have access to real-time dashboards showing key metrics across all channels. We also provide weekly or bi-weekly strategy calls (depending on your plan) and monthly performance reviews with actionable insights."
-  },
-  {
-    question: "What's your minimum contract length?",
-    answer: "We recommend a 3-month minimum to allow time for proper strategy execution and optimization. However, we offer flexible terms for clients with specific project-based needs."
+    question: "What makes Nexora Global different from single-sector agencies?",
+    answer: "Unlike niche agencies, Nexora Global offers cross-sector synergy. Your real estate client can get a website, marketing, video content, and billing solutions — all coordinated by one team that understands your business holistically."
   }
 ];
 
@@ -48,14 +48,13 @@ const FAQSection = () => {
     <section className="section-padding bg-muted/30">
       <div className="container-custom">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
-          {/* Left Column - Header */}
           <div className="lg:col-span-2">
             <p className="section-subtitle">FAQ</p>
             <h2 className="section-title text-foreground">
               Questions? <span className="gradient-text">We've Got Answers</span>
             </h2>
             <p className="text-muted-foreground mb-8">
-              Everything you need to know about working with GrowthForge. Can't find what you're looking for? Reach out to our team.
+              Everything you need to know about working with Nexora Global. Can't find what you're looking for? Reach out to our team.
             </p>
             <Button asChild>
               <Link to="/contact">
@@ -65,7 +64,6 @@ const FAQSection = () => {
             </Button>
           </div>
 
-          {/* Right Column - Accordion */}
           <div className="lg:col-span-3">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (

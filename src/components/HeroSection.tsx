@@ -30,20 +30,20 @@ const HeroSection = () => {
           {/* Welcome Badge */}
           <div className="animate-fade-up mb-6">
             <span className="text-white/80 text-base md:text-lg font-medium">
-              Welcome To <span className="text-ryse-orange font-bold">GrowthForge</span>
+              Welcome To <span className="text-ryse-orange font-bold">Nexora Global</span>
             </span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-[1.1] text-white mb-8 animate-fade-up animation-delay-100">
-            We Grow Your Revenue With{" "}
-            <span className="gradient-text">Results-Driven</span> Growth Service.
+            One Vision. Multiple Sectors.{" "}
+            <span className="gradient-text">Limitless</span> Growth.
           </h1>
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed mb-10 animate-fade-up animation-delay-200">
-            We help brands grow using Generative Engine Optimization, powerful content, 
-            high-impact media, and proven growth strategies — all under one roof.
+            From Real Estate & IT Services to Video Production and Healthcare — 
+            Nexora Global delivers industry-leading solutions across sectors that shape the future.
           </p>
 
           {/* CTA Buttons */}
@@ -54,7 +54,7 @@ const HeroSection = () => {
             </Button>
             <Button variant="dark" size="lg">
               <Play className="mr-2 h-5 w-5" />
-              Get Started
+              Explore Our Sectors
             </Button>
           </div>
         </div>

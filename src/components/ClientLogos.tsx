@@ -12,7 +12,7 @@ const ClientLogos = () => {
     <section className="py-16 bg-background border-b border-border/50 overflow-hidden">
       <div className="container-custom mb-10">
         <p className="text-center text-sm text-muted-foreground uppercase tracking-widest font-medium">
-          Trusted by Industry Leaders
+          Trusted by Leading Organizations
         </p>
       </div>
       

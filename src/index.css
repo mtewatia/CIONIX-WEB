@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* RYSE Theme - Dark with Orange/Red Gradient */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    /* RYSE Orange Primary - #fb5106 to #ff8503 */
+    --primary: 18 97% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Dark Blue/Charcoal - Hero Background */
+    --secondary: 225 30% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Purple Accent */
+    --accent: 260 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 18 97% 50%;
+
+    --radius: 0.5rem;
+
+    /* RYSE Custom tokens */
+    --hero-dark: 225 35% 8%;
+    --hero-overlay: 225 30% 10%;
+    
+    /* Orange gradient matching RYSE exactly: #fb5106 -> #ff8503 */
+    --gradient-orange: linear-gradient(135deg, #fb5106 0%, #ff8503 100%);
+    --gradient-orange-vertical: linear-gradient(180deg, #fb5106 0%, #ff8503 100%);
+    --gradient-orange-hover: linear-gradient(135deg, #ff8503 0%, #fb5106 100%);
+    
+    --shadow-orange: 0 10px 40px rgba(251, 81, 6, 0.4);
+    --shadow-card: 0 15px 50px rgba(0, 0, 0, 0.08);
+    --shadow-card-hover: 0 25px 80px rgba(0, 0, 0, 0.12);
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    --sidebar-background: 225 30% 12%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 18 97% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 85% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 225 25% 20%;
+    --sidebar-ring: 18 97% 50%;
+  }
+
+  .dark {
+    --background: 225 30% 8%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-orange);
+  }
+
+  .gradient-orange {
+    background: var(--gradient-orange);
+  }
+
+  .hero-section {
+    background: linear-gradient(180deg, hsl(225 35% 8%) 0%, hsl(225 30% 12%) 100%);
+  }
+
+  /* RYSE Curve Shape Divider */
+  .curve-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .curve-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+  }
+
+  .curve-divider .shape-fill {
+    fill: hsl(var(--background));
+  }
+
+  /* Card Styles */
+  .card-ryse {
+    @apply bg-card rounded-xl;
+    box-shadow: var(--shadow-card);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-ryse:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-10px);
+  }
+
+  /* Service Card Dark */
+  .service-card-dark {
+    @apply rounded-2xl p-8 text-center;
+    background: linear-gradient(180deg, hsl(225 30% 14%) 0%, hsl(225 30% 10%) 100%);
+    border: 1px solid hsl(225 25% 18%);
+    transition: all 0.4s ease;
+  }
+
+  .service-card-dark:hover {
+    border-color: #fb5106;
+    transform: translateY(-8px);
+  }
+
+  /* Button with Orange Gradient */
+  .btn-ryse {
+    background: var(--gradient-orange);
+    @apply text-white font-semibold rounded-full px-8 py-4;
+    box-shadow: var(--shadow-orange);
+    transition: all 0.3s ease;
+  }
+
+  .btn-ryse:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 50px rgba(251, 81, 6, 0.5);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: floating 3s ease-in-out 1s infinite;
+  }
+
+  .floating-slow {
+    animation: floating 5s ease-in-out infinite;
+  }
+
+  /* Particle dots */
+  .particle-dot {
+    @apply absolute rounded-full;
+    background: var(--gradient-orange);
+    animation: particlePulse 3s ease-in-out infinite;
+  }
+
+  /* Icon with gradient */
+  .icon-gradient {
+    @apply w-20 h-20 rounded-2xl flex items-center justify-center;
+    background: var(--gradient-orange);
+    box-shadow: 0 10px 30px rgba(251, 81, 6, 0.3);
+  }
+
+  /* Stats counter */
+  .stat-counter {
+    @apply text-center;
+  }
+
+  .stat-counter .number {
+    font-family: var(--font-heading);
+    @apply text-5xl md:text-6xl font-bold;
+    background: var(--gradient-orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section title style */
+  .section-subtitle {
+    @apply text-sm uppercase tracking-widest font-semibold mb-4;
+    color: #fb5106;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-orange {
+    animation: pulseOrange 2s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseOrange {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px rgba(251, 81, 6, 0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 40px rgba(251, 81, 6, 0.6);
+  }
+}
+
+@keyframes particlePulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}

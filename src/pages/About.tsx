@@ -82,7 +82,7 @@ const About = () => {
                 Driving Excellence Across <span className="gradient-text">Multiple Industries</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Nexora Global was founded with a bold vision: to build a multi-sector enterprise 
+                Nexorah Global was founded with a bold vision: to build a multi-sector enterprise 
                 that delivers world-class solutions across Real Estate, IT Services, Video Production 
                 & Entertainment, and Healthcare — each with its own dedicated team and expertise.
               </p>

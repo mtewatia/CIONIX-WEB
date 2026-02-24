@@ -40,7 +40,7 @@ const StrengthsSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-ryse-dark mb-4">
             Why Choose
             <br />
-            <span className="text-ryse-orange">Nexora Global?</span>
+            <span className="text-ryse-orange">Nexorah Global?</span>
           </h2>
         </div>
 

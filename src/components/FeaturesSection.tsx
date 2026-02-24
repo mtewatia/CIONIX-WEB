@@ -92,7 +92,7 @@ const FeaturesSection = () => {
               <div className="w-56 h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-ryse-orange/30 to-ryse-orange-light/20 flex items-center justify-center">
                 <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-ryse-orange to-ryse-orange-light flex items-center justify-center shadow-2xl shadow-ryse-orange/50">
                   <span className="text-white font-heading font-bold text-2xl md:text-3xl text-center">
-                    Nexora<br />Global
+                    Nexorah<br />Global
                   </span>
                 </div>
               </div>

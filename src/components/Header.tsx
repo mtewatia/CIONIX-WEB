@@ -35,7 +35,7 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to="/" className="font-heading font-bold text-2xl">
-            <span className={isScrolled ? "text-ryse-dark" : "text-white"}>Nexora</span>
+            <span className={isScrolled ? "text-ryse-dark" : "text-white"}>Nexorah</span>
             <span className="text-ryse-orange"> Global</span>
           </Link>
 

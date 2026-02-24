@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
           ">
             <h2>1. Introduction</h2>
             <p>
-              Nexora Global ("we," "our," or "us") is committed to protecting your privacy. 
+              Nexorah Global ("we," "our," or "us") is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your 
               information when you visit our website or use our services.
             </p>
@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <ul>
-              <li>Email: privacy@nexoraglobal.com</li>
+              <li>Email: privacy@nexorahglobal.com</li>
               <li>Address: San Francisco, CA</li>
             </ul>
           </div>

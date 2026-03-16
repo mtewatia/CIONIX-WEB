@@ -8,9 +8,15 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "Sectors", href: "#services", hasDropdown: true },
   { name: "About", href: "/about" },
-  { name: "Pricing", href: "/pricing" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
+];
+
+const sectorLinks = [
+  { name: "CIONIX Technologies", href: "/technologies", description: "IT Services & Digital Solutions" },
+  { name: "CIONIX Media", href: "/media", description: "Video Production & Entertainment" },
+  { name: "CIONIX Medline", href: "/medline", description: "Healthcare & Medical Billing" },
+  { name: "CIONIX Realty", href: "/realty", description: "Real Estate Consultancy" },
 ];
 
 const Header = () => {

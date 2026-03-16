@@ -2,12 +2,6 @@ import { Building2, Monitor, Film, HeartPulse, Code, Megaphone, Video, Stethosco
 
 const capabilities = [
   {
-    icon: Building2,
-    title: "Property Advisory",
-    description: "Strategic real estate consultancy for residential and commercial investments with market analysis and portfolio management.",
-    position: "left",
-  },
-  {
     icon: Code,
     title: "Web & App Development",
     description: "Custom web applications, mobile apps, and scalable digital products built with modern technologies.",
@@ -20,16 +14,16 @@ const capabilities = [
     position: "left",
   },
   {
-    icon: Video,
-    title: "Content Production",
-    description: "High-quality video production, brand films, social content, and compelling storytelling across formats.",
+    icon: Monitor,
+    title: "UI/UX Design",
+    description: "Human-centered interface design, user research, prototyping, and design systems for digital products.",
     position: "left",
   },
   {
-    icon: Film,
-    title: "YouTube Management",
-    description: "Full YouTube channel management, SEO optimization, thumbnail design, and growth automation.",
-    position: "right",
+    icon: Video,
+    title: "Content & Video Production",
+    description: "High-quality video production, brand films, social content, and compelling storytelling across formats.",
+    position: "left",
   },
   {
     icon: HeartPulse,
@@ -44,9 +38,15 @@ const capabilities = [
     position: "right",
   },
   {
-    icon: Monitor,
-    title: "UI/UX Design",
-    description: "Human-centered interface design, user research, prototyping, and design systems for digital products.",
+    icon: Building2,
+    title: "Property Advisory",
+    description: "Strategic real estate consultancy for residential and commercial investments with market analysis and portfolio management.",
+    position: "right",
+  },
+  {
+    icon: Film,
+    title: "YouTube Management",
+    description: "Full YouTube channel management, SEO optimization, thumbnail design, and growth automation.",
     position: "right",
   },
 ];

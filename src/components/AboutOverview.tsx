@@ -14,7 +14,7 @@ const AboutOverview = () => {
               One Enterprise. <span className="gradient-text">Four Sectors.</span> Infinite Possibilities.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Nexorah Global was founded with a singular vision — to build a multi-sector 
+              CIONIX Innovations Services LLC was founded with a singular vision — to build a multi-sector 
               powerhouse that delivers world-class solutions across Real Estate, IT Services, 
               Video Production & Entertainment, and Healthcare. Each division operates with 
               deep domain expertise, unified under one brand.

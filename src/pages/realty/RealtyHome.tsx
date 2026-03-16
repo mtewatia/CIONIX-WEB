@@ -1,8 +1,10 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import SectorBlogSection from "@/components/sectors/SectorBlogSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building2, Home, TrendingUp, MapPin, Users, Award, BarChart3, Shield, CheckCircle, ArrowRight, Landmark, Key } from "lucide-react";
+import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/realty" },

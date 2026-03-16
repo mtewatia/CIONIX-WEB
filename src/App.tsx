@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./pages/ServiceDetail";
@@ -30,53 +31,60 @@ import RealtyServices from "./pages/realty/RealtyServices";
 import RealtyContact from "./pages/realty/RealtyContact";
 import RealtyBlog from "./pages/realty/RealtyBlog";
 import SectorBlogDetail from "./pages/SectorBlogDetail";
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services/:serviceId" element={<ServiceDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:blogId" element={<BlogDetail />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          {/* CIONIX Technologies */}
-          <Route path="/technologies" element={<TechnologiesHome />} />
-          <Route path="/technologies/services" element={<TechnologiesServices />} />
-          <Route path="/technologies/contact" element={<TechnologiesContact />} />
-          <Route path="/technologies/blog" element={<TechnologiesBlog />} />
-          <Route path="/technologies/blog/:blogId" element={<SectorBlogDetail />} />
-          {/* CIONIX Media */}
-          <Route path="/media" element={<MediaHome />} />
-          <Route path="/media/services" element={<MediaServices />} />
-          <Route path="/media/contact" element={<MediaContact />} />
-          <Route path="/media/blog" element={<MediaBlog />} />
-          <Route path="/media/blog/:blogId" element={<SectorBlogDetail />} />
-          {/* CIONIX Medline */}
-          <Route path="/medline" element={<MedlineHome />} />
-          <Route path="/medline/services" element={<MedlineServices />} />
-          <Route path="/medline/contact" element={<MedlineContact />} />
-          <Route path="/medline/blog" element={<MedlineBlog />} />
-          <Route path="/medline/blog/:blogId" element={<SectorBlogDetail />} />
-          {/* CIONIX Realty */}
-          <Route path="/realty" element={<RealtyHome />} />
-          <Route path="/realty/services" element={<RealtyServices />} />
-          <Route path="/realty/contact" element={<RealtyContact />} />
-          <Route path="/realty/blog" element={<RealtyBlog />} />
-          <Route path="/realty/blog/:blogId" element={<SectorBlogDetail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <AuthProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/services/:serviceId" element={<ServiceDetail />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:blogId" element={<BlogDetail />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            {/* CIONIX Technologies */}
+            <Route path="/technologies" element={<TechnologiesHome />} />
+            <Route path="/technologies/services" element={<TechnologiesServices />} />
+            <Route path="/technologies/contact" element={<TechnologiesContact />} />
+            <Route path="/technologies/blog" element={<TechnologiesBlog />} />
+            <Route path="/technologies/blog/:blogId" element={<SectorBlogDetail />} />
+            {/* CIONIX Media */}
+            <Route path="/media" element={<MediaHome />} />
+            <Route path="/media/services" element={<MediaServices />} />
+            <Route path="/media/contact" element={<MediaContact />} />
+            <Route path="/media/blog" element={<MediaBlog />} />
+            <Route path="/media/blog/:blogId" element={<SectorBlogDetail />} />
+            {/* CIONIX Medline */}
+            <Route path="/medline" element={<MedlineHome />} />
+            <Route path="/medline/services" element={<MedlineServices />} />
+            <Route path="/medline/contact" element={<MedlineContact />} />
+            <Route path="/medline/blog" element={<MedlineBlog />} />
+            <Route path="/medline/blog/:blogId" element={<SectorBlogDetail />} />
+            {/* CIONIX Realty */}
+            <Route path="/realty" element={<RealtyHome />} />
+            <Route path="/realty/services" element={<RealtyServices />} />
+            <Route path="/realty/contact" element={<RealtyContact />} />
+            <Route path="/realty/blog" element={<RealtyBlog />} />
+            <Route path="/realty/blog/:blogId" element={<SectorBlogDetail />} />
+            {/* Admin */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </AuthProvider>
   </QueryClientProvider>
 );
 

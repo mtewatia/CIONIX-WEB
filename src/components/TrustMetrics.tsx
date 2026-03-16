@@ -1,7 +1,6 @@
 import { Users, Globe, Clock, BarChart3 } from "lucide-react";
 
 const metrics = [
-  { icon: Users, label: "USA Clients Served" },
   { icon: Globe, label: "Global Delivery Model" },
   { icon: Clock, label: "24/7 Operations" },
   { icon: BarChart3, label: "Data-Driven Approach" },

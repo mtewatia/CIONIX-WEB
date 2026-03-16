@@ -13,7 +13,7 @@ const slides = [
     highlight: "Limitless",
     headlineEnd: " Growth.",
     description:
-      "From Real Estate & IT Services to Video Production and Healthcare — Nexorah Global delivers industry-leading solutions across sectors that shape the future.",
+      "From Real Estate & IT Services to Video Production and Healthcare — CIONIX delivers industry-leading solutions across sectors that shape the future.",
   },
   {
     image: heroSlide2,

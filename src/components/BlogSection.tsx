@@ -33,7 +33,7 @@ const BlogSection = () => {
             Insights & News
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Latest From Nexorah Global
+            Latest From CIONIX
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Stay updated with insights across all our sectors — from technology and healthcare to real estate and media.

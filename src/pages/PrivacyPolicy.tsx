@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <ul>
-              <li>Email: privacy@nexorahglobal.com</li>
+              <li>Email: privacy@cionix.com</li>
               <li>Address: San Francisco, CA</li>
             </ul>
           </div>

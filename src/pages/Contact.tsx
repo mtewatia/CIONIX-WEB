@@ -60,7 +60,7 @@ const Contact = () => {
       
       <PageHeader
         title="Contact Us"
-        subtitle="Have a project in mind? Let's discuss how Nexorah Global can help across any sector."
+        subtitle="Have a project in mind? Let's discuss how CIONIX can help across any sector."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" }

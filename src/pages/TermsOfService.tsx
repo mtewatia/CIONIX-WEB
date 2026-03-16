@@ -144,7 +144,7 @@ const TermsOfService = () => {
             <h2>14. Contact Information</h2>
             <p>For questions about these Terms of Service, please contact us at:</p>
             <ul>
-              <li>Email: legal@nexorahglobal.com</li>
+              <li>Email: legal@cionix.com</li>
               <li>Address: San Francisco, CA</li>
             </ul>
           </div>

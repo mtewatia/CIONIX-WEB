@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="py-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/50">© {new Date().getFullYear()} Nexorah Global. All rights reserved.</p>
+          <p className="text-sm text-white/50">© {new Date().getFullYear()} CIONIX Innovations Services LLC. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link to="/privacy-policy" className="text-sm text-white/50 hover:text-ryse-orange transition-colors">Privacy Policy</Link>
             <Link to="/terms-of-service" className="text-sm text-white/50 hover:text-ryse-orange transition-colors">Terms of Service</Link>

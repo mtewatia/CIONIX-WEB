@@ -18,7 +18,7 @@ const FinalCTA = () => {
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading mb-6 text-white leading-tight">
             Ready to Work With{" "}
-            <span className="gradient-text">Nexorah Global?</span>
+            <span className="gradient-text">CIONIX?</span>
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10">

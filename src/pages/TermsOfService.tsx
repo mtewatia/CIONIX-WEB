@@ -87,7 +87,7 @@ const TermsOfService = () => {
 
             <h2>7. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, Nexorah Global shall not be liable for any 
+              To the maximum extent permitted by law, CIONIX Innovations Services LLC shall not be liable for any 
               indirect, incidental, special, consequential, or punitive damages, including but 
               not limited to loss of profits, data, or other intangible losses.
             </p>

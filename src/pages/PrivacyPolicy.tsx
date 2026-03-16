@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
           ">
             <h2>1. Introduction</h2>
             <p>
-              Nexorah Global ("we," "our," or "us") is committed to protecting your privacy. 
+              CIONIX Innovations Services LLC ("we," "our," or "us") is committed to protecting your privacy. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your 
               information when you visit our website or use our services.
             </p>

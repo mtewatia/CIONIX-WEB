@@ -64,11 +64,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="font-heading font-bold text-lg mb-6">Contact Us</h4>
             <div className="space-y-4">
-              <a href="mailto:hello@nexorahglobal.com" className="flex items-center gap-3 text-white/60 hover:text-ryse-orange transition-colors">
+              <a href="mailto:hello@cionix.com" className="flex items-center gap-3 text-white/60 hover:text-ryse-orange transition-colors">
                 <div className="w-10 h-10 rounded-full bg-ryse-orange/20 flex items-center justify-center">
                   <Mail className="h-4 w-4 text-ryse-orange" />
                 </div>
-                <span className="text-sm">hello@nexorahglobal.com</span>
+                <span className="text-sm">hello@cionix.com</span>
               </a>
               <a href="tel:+1234567890" className="flex items-center gap-3 text-white/60 hover:text-ryse-orange transition-colors">
                 <div className="w-10 h-10 rounded-full bg-ryse-orange/20 flex items-center justify-center">

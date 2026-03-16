@@ -3,7 +3,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 const blogPosts = [
   {
     title: "How Multi-Sector Companies Are Shaping the Future of Business",
-    excerpt: "Discover why diversified enterprises like Nexorah Global are outperforming single-sector companies in today's dynamic market.",
+    excerpt: "Discover why diversified enterprises like CIONIX are outperforming single-sector companies in today's dynamic market.",
     category: "Business",
     date: "Feb 15, 2026",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",

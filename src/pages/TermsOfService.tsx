@@ -27,7 +27,7 @@ const TermsOfService = () => {
           ">
             <h2>1. Agreement to Terms</h2>
             <p>
-              By accessing or using Nexorah Global's website and services, you agree to be bound 
+              By accessing or using CIONIX Innovations Services LLC's website and services, you agree to be bound 
               by these Terms of Service and all applicable laws and regulations. If you do not 
               agree with any of these terms, you are prohibited from using our services.
             </p>

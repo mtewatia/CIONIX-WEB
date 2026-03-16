@@ -16,6 +16,15 @@ import TermsOfService from "./pages/TermsOfService";
 import TechnologiesHome from "./pages/technologies/TechnologiesHome";
 import TechnologiesServices from "./pages/technologies/TechnologiesServices";
 import TechnologiesContact from "./pages/technologies/TechnologiesContact";
+import MediaHome from "./pages/media/MediaHome";
+import MediaServices from "./pages/media/MediaServices";
+import MediaContact from "./pages/media/MediaContact";
+import MedlineHome from "./pages/medline/MedlineHome";
+import MedlineServices from "./pages/medline/MedlineServices";
+import MedlineContact from "./pages/medline/MedlineContact";
+import RealtyHome from "./pages/realty/RealtyHome";
+import RealtyServices from "./pages/realty/RealtyServices";
+import RealtyContact from "./pages/realty/RealtyContact";
 
 const queryClient = new QueryClient();
 

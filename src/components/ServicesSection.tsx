@@ -8,28 +8,28 @@ const sectors = [
     title: "CIONIX Technologies",
     description: "Full-spectrum technology solutions including Web & App Development, GEO (Generative Engine Optimization), Content Marketing, Digital Marketing, and more.",
     color: "from-primary to-orange-400",
-    link: "#",
+    link: "/technologies",
   },
   {
     icon: Film,
     title: "CIONIX Media",
     description: "End-to-end content production, professional video creation, YouTube channel management, and entertainment media services that captivate audiences.",
     color: "from-purple-500 to-pink-500",
-    link: "#",
+    link: "/media",
   },
   {
     icon: HeartPulse,
     title: "CIONIX Medline",
     description: "Specialized healthcare solutions including Medical Billing services for USA-based doctors, practice management consulting, and healthcare IT integration.",
     color: "from-emerald-500 to-teal-500",
-    link: "#",
+    link: "/medline",
   },
   {
     icon: Building2,
     title: "CIONIX Realty",
     description: "Expert guidance on property investments, market analysis, portfolio management, and strategic real estate advisory for residential and commercial projects.",
     color: "from-blue-500 to-indigo-600",
-    link: "#",
+    link: "/realty",
   },
 ];
 

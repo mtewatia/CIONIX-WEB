@@ -9,7 +9,7 @@ const AboutOverview = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Content */}
           <div>
-            <p className="section-subtitle">About Nexorah Global</p>
+            <p className="section-subtitle">About CIONIX</p>
             <h2 className="section-title text-foreground">
               One Enterprise. <span className="gradient-text">Four Sectors.</span> Infinite Possibilities.
             </h2>

@@ -4,13 +4,6 @@ import { Link } from "react-router-dom";
 
 const sectors = [
   {
-    icon: Building2,
-    title: "CIONIX Realty",
-    description: "Expert guidance on property investments, market analysis, portfolio management, and strategic real estate advisory for residential and commercial projects.",
-    color: "from-blue-500 to-indigo-600",
-    link: "#",
-  },
-  {
     icon: Monitor,
     title: "CIONIX Technologies",
     description: "Full-spectrum technology solutions including Web & App Development, GEO (Generative Engine Optimization), Content Marketing, Digital Marketing, and more.",
@@ -29,6 +22,13 @@ const sectors = [
     title: "CIONIX Medline",
     description: "Specialized healthcare solutions including Medical Billing services for USA-based doctors, practice management consulting, and healthcare IT integration.",
     color: "from-emerald-500 to-teal-500",
+    link: "#",
+  },
+  {
+    icon: Building2,
+    title: "CIONIX Realty",
+    description: "Expert guidance on property investments, market analysis, portfolio management, and strategic real estate advisory for residential and commercial projects.",
+    color: "from-blue-500 to-indigo-600",
     link: "#",
   },
 ];

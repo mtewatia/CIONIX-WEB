@@ -10,7 +10,7 @@ const TrustMetrics = () => {
   return (
     <section className="py-6 bg-secondary relative z-10">
       <div className="container-custom">
-        <div className="flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-4">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
           {metrics.map((item, index) => (
             <div
               key={index}

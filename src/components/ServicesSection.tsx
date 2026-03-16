@@ -72,11 +72,17 @@ const ServicesSection = () => {
                 {sector.description}
               </p>
 
-              <span className="inline-flex items-center text-primary font-semibold text-sm">
-                Coming Soon — Dedicated Website
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </span>
-            </div>
+              {sector.link.startsWith("/") && sector.link !== "#" ? (
+                <Link to={sector.link} className="inline-flex items-center text-primary font-semibold text-sm hover:gap-1 transition-all">
+                  Explore {sector.title.replace("CIONIX ", "")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              ) : (
+                <span className="inline-flex items-center text-primary font-semibold text-sm">
+                  Coming Soon — Dedicated Website
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </span>
+              )}
           ))}
         </div>
       </div>

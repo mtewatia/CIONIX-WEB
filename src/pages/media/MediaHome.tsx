@@ -9,6 +9,7 @@ import { getBlogsBySector } from "@/data/blogPosts";
 const navLinks = [
   { name: "Home", href: "/media" },
   { name: "Services", href: "/media/services" },
+  { name: "Blog", href: "/media/blog" },
   { name: "Contact", href: "/media/contact" },
 ];
 

@@ -31,8 +31,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      value: "hello@nexorahglobal.com",
-      href: "mailto:hello@nexorahglobal.com"
+      value: "hello@cionix.com",
+      href: "mailto:hello@cionix.com"
     },
     {
       icon: Phone,

@@ -16,8 +16,7 @@ const Footer = () => {
         <div className="py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
             <Link to="/" className="font-heading font-bold text-2xl mb-6 block">
-              <span className="text-white">Nexorah</span>
-              <span className="text-ryse-orange"> Global</span>
+              <span className="text-white">CIONIX</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               A multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.

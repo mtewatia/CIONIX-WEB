@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const sectors = [
   {
     icon: Building2,
-    title: "Real Estate Consultancy",
+    title: "CIONIX Realty",
     description: "Expert guidance on property investments, market analysis, portfolio management, and strategic real estate advisory for residential and commercial projects.",
     color: "from-blue-500 to-indigo-600",
     link: "#",

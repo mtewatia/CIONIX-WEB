@@ -83,6 +83,7 @@ const ServicesSection = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </span>
               )}
+            </div>
           ))}
         </div>
       </div>

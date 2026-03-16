@@ -19,7 +19,7 @@ const Footer = () => {
               <span className="text-white">CIONIX</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              A multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.
+              CIONIX Innovations Services LLC — a multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (

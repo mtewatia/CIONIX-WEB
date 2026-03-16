@@ -1,8 +1,10 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import SectorBlogSection from "@/components/sectors/SectorBlogSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { HeartPulse, FileText, DollarSign, Shield, Users, TrendingUp, Clock, CheckCircle, ArrowRight, Building2, Stethoscope, ClipboardList } from "lucide-react";
+import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/medline" },

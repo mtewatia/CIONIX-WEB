@@ -12,7 +12,7 @@ const sectors = [
   },
   {
     icon: Monitor,
-    title: "IT Services",
+    title: "CIONIX Technologies",
     description: "Full-spectrum technology solutions including Web & App Development, GEO (Generative Engine Optimization), Content Marketing, Digital Marketing, and more.",
     color: "from-primary to-orange-400",
     link: "#",

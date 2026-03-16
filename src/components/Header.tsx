@@ -75,21 +75,18 @@ const Header = () => {
                 )}
 
                 {link.hasDropdown && isServicesOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px]">
-                    <div className="bg-white rounded-2xl shadow-2xl p-6 grid grid-cols-2 gap-3">
-                      {services.map((service) => (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[360px]">
+                    <div className="bg-white rounded-2xl shadow-2xl p-4 space-y-1">
+                      {sectorLinks.map((sector) => (
                         <Link
-                          key={service.id}
-                          to={`/services/${service.id}`}
-                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-muted/50 transition-colors group"
+                          key={sector.href}
+                          to={sector.href}
+                          className="flex flex-col p-3 rounded-xl hover:bg-muted/50 transition-colors group"
                         >
-                          <img src={service.image} alt={service.title} className="w-10 h-10 object-contain" />
-                          <div>
-                            <p className="font-semibold text-foreground group-hover:text-primary text-sm">
-                              {service.shortTitle}
-                            </p>
-                            <p className="text-xs text-muted-foreground line-clamp-1">{service.description}</p>
-                          </div>
+                          <p className="font-semibold text-foreground group-hover:text-primary text-sm">
+                            {sector.name}
+                          </p>
+                          <p className="text-xs text-muted-foreground">{sector.description}</p>
                         </Link>
                       ))}
                     </div>

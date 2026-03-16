@@ -26,7 +26,7 @@ const sectors = [
   },
   {
     icon: HeartPulse,
-    title: "Healthcare Industry",
+    title: "CIONIX Medline",
     description: "Specialized healthcare solutions including Medical Billing services for USA-based doctors, practice management consulting, and healthcare IT integration.",
     color: "from-emerald-500 to-teal-500",
     link: "#",

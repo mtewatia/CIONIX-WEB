@@ -64,7 +64,7 @@ const TermsOfService = () => {
             <h3>Our Property</h3>
             <p>
               All content, features, and functionality of our website and services, including 
-              but not limited to text, graphics, logos, and software, are owned by Nexorah Global 
+              but not limited to text, graphics, logos, and software, are owned by CIONIX Innovations Services LLC 
               and protected by intellectual property laws.
             </p>
             <h3>Client Materials</h3>

@@ -1,12 +1,15 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import SectorBlogSection from "@/components/sectors/SectorBlogSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Building2, Home, TrendingUp, MapPin, Users, Award, BarChart3, Shield, CheckCircle, ArrowRight, Landmark, Key } from "lucide-react";
+import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/realty" },
   { name: "Services", href: "/realty/services" },
+  { name: "Blog", href: "/realty/blog" },
   { name: "Contact", href: "/realty/contact" },
 ];
 
@@ -171,6 +174,8 @@ const RealtyHome = () => {
           </Button>
         </div>
       </section>
+
+      <SectorBlogSection posts={getBlogsBySector("realty")} sectorPath="/realty" accentColor="from-blue-500 to-indigo-600" accentText="text-blue-600" />
 
       <SectorFooter
         sectorName="Realty"

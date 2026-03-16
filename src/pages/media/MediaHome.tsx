@@ -1,12 +1,15 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import SectorBlogSection from "@/components/sectors/SectorBlogSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Play, Film, Youtube, Camera, Mic, TrendingUp, Users, Eye, Award, ArrowRight, CheckCircle } from "lucide-react";
+import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/media" },
   { name: "Services", href: "/media/services" },
+  { name: "Blog", href: "/media/blog" },
   { name: "Contact", href: "/media/contact" },
 ];
 
@@ -222,6 +225,8 @@ const MediaHome = () => {
           </Button>
         </div>
       </section>
+
+      <SectorBlogSection posts={getBlogsBySector("media")} sectorPath="/media" accentColor="from-purple-500 to-pink-500" accentText="text-purple-600" />
 
       <SectorFooter
         sectorName="Media"

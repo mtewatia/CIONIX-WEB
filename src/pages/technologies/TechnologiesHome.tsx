@@ -1,12 +1,15 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import SectorBlogSection from "@/components/sectors/SectorBlogSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Globe, Smartphone, Search, BarChart3, Zap, Shield, Users, CheckCircle2, Monitor, Cpu, Database, Cloud } from "lucide-react";
+import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/technologies" },
   { name: "Services", href: "/technologies/services" },
+  { name: "Blog", href: "/technologies/blog" },
   { name: "Contact", href: "/technologies/contact" },
 ];
 
@@ -199,6 +202,8 @@ const TechnologiesHome = () => {
           </div>
         </div>
       </section>
+
+      <SectorBlogSection posts={getBlogsBySector("technologies")} sectorPath="/technologies" accentColor="from-primary to-orange-400" accentText="text-primary" />
 
       <SectorFooter
         sectorName="Technologies"

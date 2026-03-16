@@ -1,197 +1,104 @@
+import { useState } from "react";
 import { ArrowRight, Calendar, Clock, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/layout/PageHeader";
+import { allBlogPosts, sectorBadgeColors, type BlogPost } from "@/data/blogPosts";
 
-const blogPosts = [
-  {
-    id: "geo-future-of-search",
-    title: "GEO: The Future of Search in an AI-First World",
-    excerpt: "How generative engine optimization is revolutionizing the way brands get discovered online.",
-    category: "GEO",
-    author: "Sarah Chen",
-    date: "Dec 15, 2024",
-    readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-    featured: true
-  },
-  {
-    id: "content-strategy-2025",
-    title: "Content Strategy for 2025: What's Changing",
-    excerpt: "The key trends shaping content marketing and how to stay ahead of the curve.",
-    category: "Content",
-    author: "Marcus Johnson",
-    date: "Dec 12, 2024",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=400&fit=crop",
-    featured: false
-  },
-  {
-    id: "social-media-roi",
-    title: "Maximizing Social Media ROI: A Data-Driven Approach",
-    excerpt: "Learn how to measure and optimize your social media performance for real business results.",
-    category: "Social Media",
-    author: "Elena Rodriguez",
-    date: "Dec 10, 2024",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=800&h=400&fit=crop",
-    featured: false
-  },
-  {
-    id: "email-automation-guide",
-    title: "The Complete Guide to Email Marketing Automation",
-    excerpt: "From welcome sequences to win-back campaigns, master the art of automated email marketing.",
-    category: "Email",
-    author: "David Kim",
-    date: "Dec 8, 2024",
-    readTime: "10 min read",
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&h=400&fit=crop",
-    featured: false
-  },
-  {
-    id: "video-marketing-trends",
-    title: "Video Marketing Trends You Can't Ignore",
-    excerpt: "Short-form, live streaming, and interactive video—which formats drive the most engagement?",
-    category: "Video",
-    author: "Sarah Chen",
-    date: "Dec 5, 2024",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&h=400&fit=crop",
-    featured: false
-  },
-  {
-    id: "ux-conversion-optimization",
-    title: "UX Design Principles That Boost Conversions",
-    excerpt: "How small design changes can lead to significant improvements in your conversion rates.",
-    category: "Design",
-    author: "Marcus Johnson",
-    date: "Dec 2, 2024",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop",
-    featured: false
-  }
+const sectorFilters = [
+  { key: "all", label: "All Sectors" },
+  { key: "technologies", label: "Technologies" },
+  { key: "media", label: "Media" },
+  { key: "medline", label: "Medline" },
+  { key: "realty", label: "Realty" },
 ];
 
-const categories = ["All", "GEO", "Content", "Social Media", "Email", "Video", "Design"];
-
 const Blog = () => {
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const [activeSector, setActiveSector] = useState("all");
+
+  const filtered = activeSector === "all"
+    ? allBlogPosts
+    : allBlogPosts.filter((p) => p.sector === activeSector);
+
+  const featured = filtered.find((p) => p.featured);
+  const rest = filtered.filter((p) => p !== featured);
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <PageHeader
         title="Blog"
-        subtitle="Insights, strategies, and trends from our growth experts."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Blog" }
-        ]}
+        subtitle="Insights and strategies from experts across all CIONIX sectors."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
       />
 
       <section className="section-padding">
         <div className="container-custom">
-          {/* Categories */}
+          {/* Sector Filters */}
           <div className="flex flex-wrap gap-3 mb-12">
-            {categories.map((category) => (
+            {sectorFilters.map((filter) => (
               <button
-                key={category}
+                key={filter.key}
+                onClick={() => setActiveSector(filter.key)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category === "All"
+                  activeSector === filter.key
                     ? "bg-primary text-white"
                     : "bg-muted hover:bg-primary/10 text-foreground"
                 }`}
               >
-                {category}
+                {filter.label}
               </button>
             ))}
           </div>
 
-          {/* Featured Post */}
-          {featuredPost && (
-            <Link 
-              to={`/blog/${featuredPost.id}`}
-              className="card-ryse overflow-hidden block mb-12 group"
-            >
+          {/* Featured */}
+          {featured && (
+            <Link to={`/blog/${featured.id}`} className="card-ryse overflow-hidden block mb-12 group">
               <div className="grid lg:grid-cols-2">
                 <div className="aspect-video lg:aspect-auto overflow-hidden">
-                  <img 
-                    src={featuredPost.image} 
-                    alt={featuredPost.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <img src={featured.image} alt={featured.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <span className="text-primary text-sm font-semibold mb-3">
-                    {featuredPost.category} • Featured
-                  </span>
-                  <h2 className="text-2xl lg:text-3xl font-bold font-heading mb-4 group-hover:text-primary transition-colors">
-                    {featuredPost.title}
-                  </h2>
-                  <p className="text-muted-foreground mb-6">{featuredPost.excerpt}</p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-primary text-sm font-semibold">{featured.category}</span>
+                    <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${sectorBadgeColors[featured.sector]}`}>{featured.sectorLabel}</span>
+                    <span className="text-muted-foreground text-sm">• Featured</span>
+                  </div>
+                  <h2 className="text-2xl lg:text-3xl font-bold font-heading mb-4 group-hover:text-primary transition-colors">{featured.title}</h2>
+                  <p className="text-muted-foreground mb-6">{featured.excerpt}</p>
                   <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <User className="h-4 w-4" />
-                      {featuredPost.author}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {featuredPost.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {featuredPost.readTime}
-                    </span>
+                    <span className="flex items-center gap-1"><User className="h-4 w-4" />{featured.author}</span>
+                    <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{featured.date}</span>
+                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{featured.readTime}</span>
                   </div>
                 </div>
               </div>
             </Link>
           )}
 
-          {/* Blog Grid */}
+          {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post) => (
-              <Link 
-                key={post.id}
-                to={`/blog/${post.id}`}
-                className="card-ryse overflow-hidden group"
-              >
+            {rest.map((post) => (
+              <Link key={post.id} to={`/blog/${post.id}`} className="card-ryse overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
-                  <span className="text-primary text-sm font-semibold">
-                    {post.category}
-                  </span>
-                  <h3 className="text-lg font-bold font-heading mt-2 mb-3 group-hover:text-primary transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-primary text-sm font-semibold">{post.category}</span>
+                    <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${sectorBadgeColors[post.sector]}`}>{post.sectorLabel}</span>
+                  </div>
+                  <h3 className="text-lg font-bold font-heading mt-1 mb-3 group-hover:text-primary transition-colors">{post.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{post.excerpt}</p>
                   <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                    <span>{post.date}</span>
-                    <span>{post.readTime}</span>
+                    <span>{post.date}</span><span>{post.readTime}</span>
                   </div>
                 </div>
               </Link>
             ))}
-          </div>
-
-          {/* Load More */}
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              Load More Articles
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
           </div>
         </div>
       </section>

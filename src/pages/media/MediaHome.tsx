@@ -1,8 +1,10 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import SectorBlogSection from "@/components/sectors/SectorBlogSection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Play, Film, Youtube, Camera, Mic, TrendingUp, Users, Eye, Award, ArrowRight, CheckCircle } from "lucide-react";
+import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/media" },

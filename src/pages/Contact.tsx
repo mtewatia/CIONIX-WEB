@@ -31,8 +31,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      value: "hello@nexorahglobal.com",
-      href: "mailto:hello@nexorahglobal.com"
+      value: "hello@cionix.com",
+      href: "mailto:hello@cionix.com"
     },
     {
       icon: Phone,
@@ -60,7 +60,7 @@ const Contact = () => {
       
       <PageHeader
         title="Contact Us"
-        subtitle="Have a project in mind? Let's discuss how Nexorah Global can help across any sector."
+        subtitle="Have a project in mind? Let's discuss how CIONIX can help across any sector."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" }

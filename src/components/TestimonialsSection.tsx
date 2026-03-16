@@ -3,21 +3,21 @@ import { Quote, ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Nexorah Global handled our property consulting and built our investment portal — all under one roof. The seamless coordination between teams saved us months of work.",
+    quote: "CIONIX handled our property consulting and built our investment portal — all under one roof. The seamless coordination between teams saved us months of work.",
     name: "Ahmed Al-Rashid",
     role: "CEO",
     company: "Gulf Properties Group",
     rating: 5,
   },
   {
-    quote: "Their medical billing team transformed our revenue cycle. We went from 60% claim acceptance to over 95%. The healthcare division at Nexorah truly understands the US medical system.",
+    quote: "Their medical billing team transformed our revenue cycle. We went from 60% claim acceptance to over 95%. The healthcare division at CIONIX truly understands the US medical system.",
     name: "Dr. Sarah Mitchell",
     role: "Practice Owner",
     company: "Midwest Family Health",
     rating: 5,
   },
   {
-    quote: "From web development to video production, Nexorah Global delivered everything we needed to launch our brand. Their IT and media teams work like a well-oiled machine.",
+    quote: "From web development to video production, CIONIX delivered everything we needed to launch our brand. Their IT and media teams work like a well-oiled machine.",
     name: "James O'Brien",
     role: "Founder",
     company: "TechWave Studios",

@@ -9,12 +9,12 @@ const AboutOverview = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Content */}
           <div>
-            <p className="section-subtitle">About Nexorah Global</p>
+            <p className="section-subtitle">About CIONIX</p>
             <h2 className="section-title text-foreground">
               One Enterprise. <span className="gradient-text">Four Sectors.</span> Infinite Possibilities.
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Nexorah Global was founded with a singular vision — to build a multi-sector 
+              CIONIX Innovations Services LLC was founded with a singular vision — to build a multi-sector 
               powerhouse that delivers world-class solutions across Real Estate, IT Services, 
               Video Production & Entertainment, and Healthcare. Each division operates with 
               deep domain expertise, unified under one brand.
@@ -46,7 +46,7 @@ const AboutOverview = () => {
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-                alt="Nexorah Global team collaboration"
+                alt="CIONIX team collaboration"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />

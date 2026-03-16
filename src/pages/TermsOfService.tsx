@@ -27,14 +27,14 @@ const TermsOfService = () => {
           ">
             <h2>1. Agreement to Terms</h2>
             <p>
-              By accessing or using Nexorah Global's website and services, you agree to be bound 
+              By accessing or using CIONIX Innovations Services LLC's website and services, you agree to be bound 
               by these Terms of Service and all applicable laws and regulations. If you do not 
               agree with any of these terms, you are prohibited from using our services.
             </p>
 
             <h2>2. Description of Services</h2>
             <p>
-              GrowthForge provides digital marketing, growth optimization, and related consulting 
+              CIONIX Innovations Services LLC provides multi-sector business solutions, including Real Estate Consultancy, IT Services, Video Production & Entertainment, Healthcare, and related consulting 
               services. The specific services provided will be detailed in individual service 
               agreements or statements of work.
             </p>
@@ -64,7 +64,7 @@ const TermsOfService = () => {
             <h3>Our Property</h3>
             <p>
               All content, features, and functionality of our website and services, including 
-              but not limited to text, graphics, logos, and software, are owned by Nexorah Global 
+              but not limited to text, graphics, logos, and software, are owned by CIONIX Innovations Services LLC 
               and protected by intellectual property laws.
             </p>
             <h3>Client Materials</h3>
@@ -87,7 +87,7 @@ const TermsOfService = () => {
 
             <h2>7. Limitation of Liability</h2>
             <p>
-              To the maximum extent permitted by law, Nexorah Global shall not be liable for any 
+              To the maximum extent permitted by law, CIONIX Innovations Services LLC shall not be liable for any 
               indirect, incidental, special, consequential, or punitive damages, including but 
               not limited to loss of profits, data, or other intangible losses.
             </p>
@@ -105,7 +105,7 @@ const TermsOfService = () => {
 
             <h2>9. Indemnification</h2>
             <p>
-              You agree to indemnify and hold harmless Nexorah Global and its employees from any 
+              You agree to indemnify and hold harmless CIONIX Innovations Services LLC and its employees from any 
               claims, damages, or expenses arising from your use of our services or violation 
               of these terms.
             </p>
@@ -144,7 +144,7 @@ const TermsOfService = () => {
             <h2>14. Contact Information</h2>
             <p>For questions about these Terms of Service, please contact us at:</p>
             <ul>
-              <li>Email: legal@nexorahglobal.com</li>
+              <li>Email: legal@cionix.com</li>
               <li>Address: San Francisco, CA</li>
             </ul>
           </div>

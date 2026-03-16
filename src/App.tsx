@@ -48,6 +48,18 @@ const App = () => (
           <Route path="/technologies" element={<TechnologiesHome />} />
           <Route path="/technologies/services" element={<TechnologiesServices />} />
           <Route path="/technologies/contact" element={<TechnologiesContact />} />
+          {/* CIONIX Media */}
+          <Route path="/media" element={<MediaHome />} />
+          <Route path="/media/services" element={<MediaServices />} />
+          <Route path="/media/contact" element={<MediaContact />} />
+          {/* CIONIX Medline */}
+          <Route path="/medline" element={<MedlineHome />} />
+          <Route path="/medline/services" element={<MedlineServices />} />
+          <Route path="/medline/contact" element={<MedlineContact />} />
+          {/* CIONIX Realty */}
+          <Route path="/realty" element={<RealtyHome />} />
+          <Route path="/realty/services" element={<RealtyServices />} />
+          <Route path="/realty/contact" element={<RealtyContact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

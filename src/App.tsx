@@ -13,6 +13,9 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import TechnologiesHome from "./pages/technologies/TechnologiesHome";
+import TechnologiesServices from "./pages/technologies/TechnologiesServices";
+import TechnologiesContact from "./pages/technologies/TechnologiesContact";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +35,10 @@ const App = () => (
           <Route path="/blog/:blogId" element={<BlogDetail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          {/* CIONIX Technologies */}
+          <Route path="/technologies" element={<TechnologiesHome />} />
+          <Route path="/technologies/services" element={<TechnologiesServices />} />
+          <Route path="/technologies/contact" element={<TechnologiesContact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

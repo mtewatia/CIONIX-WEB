@@ -179,6 +179,8 @@ const MedlineHome = () => {
         </div>
       </section>
 
+      <SectorBlogSection posts={getBlogsBySector("medline")} sectorPath="/medline" accentColor="from-emerald-500 to-teal-500" accentText="text-emerald-600" />
+
       <SectorFooter
         sectorName="Medline"
         description="CIONIX Medline provides specialized medical billing, revenue cycle management, and healthcare IT solutions for USA-based physicians."

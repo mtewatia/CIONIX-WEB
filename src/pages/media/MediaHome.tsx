@@ -226,6 +226,8 @@ const MediaHome = () => {
         </div>
       </section>
 
+      <SectorBlogSection posts={getBlogsBySector("media")} sectorPath="/media" accentColor="from-purple-500 to-pink-500" accentText="text-purple-600" />
+
       <SectorFooter
         sectorName="Media"
         description="CIONIX Media delivers end-to-end media production, YouTube automation, and content creation services that amplify your brand's digital presence."

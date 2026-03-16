@@ -203,6 +203,8 @@ const TechnologiesHome = () => {
         </div>
       </section>
 
+      <SectorBlogSection posts={getBlogsBySector("technologies")} sectorPath="/technologies" accentColor="from-primary to-orange-400" accentText="text-primary" />
+
       <SectorFooter
         sectorName="Technologies"
         description="CIONIX Technologies delivers cutting-edge web, mobile, AI, and digital marketing solutions for businesses worldwide."

@@ -175,6 +175,8 @@ const RealtyHome = () => {
         </div>
       </section>
 
+      <SectorBlogSection posts={getBlogsBySector("realty")} sectorPath="/realty" accentColor="from-blue-500 to-indigo-600" accentText="text-blue-600" />
+
       <SectorFooter
         sectorName="Realty"
         description="CIONIX Realty offers expert real estate advisory, investment consulting, and property management services across premium locations."

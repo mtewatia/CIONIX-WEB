@@ -105,7 +105,7 @@ const TermsOfService = () => {
 
             <h2>9. Indemnification</h2>
             <p>
-              You agree to indemnify and hold harmless Nexorah Global and its employees from any 
+              You agree to indemnify and hold harmless CIONIX Innovations Services LLC and its employees from any 
               claims, damages, or expenses arising from your use of our services or violation 
               of these terms.
             </p>

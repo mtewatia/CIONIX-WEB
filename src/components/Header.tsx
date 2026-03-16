@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import { services } from "@/data/services";
+
 
 const navLinks = [
   { name: "Home", href: "/" },

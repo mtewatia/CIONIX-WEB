@@ -104,7 +104,7 @@ const HeroSection = () => {
         <div className="max-w-5xl">
           <div className="animate-fade-up mb-6" key={`badge-${current}`}>
             <span className="text-white/80 text-base md:text-lg font-medium">
-              {slides[current].subtitle} — <span className="text-ryse-orange font-bold">Nexorah Global</span>
+              {slides[current].subtitle} — <span className="text-ryse-orange font-bold">CIONIX</span>
             </span>
           </div>
 

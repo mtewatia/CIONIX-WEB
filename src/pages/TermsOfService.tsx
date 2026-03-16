@@ -34,7 +34,7 @@ const TermsOfService = () => {
 
             <h2>2. Description of Services</h2>
             <p>
-              GrowthForge provides digital marketing, growth optimization, and related consulting 
+              CIONIX Innovations Services LLC provides multi-sector business solutions, including Real Estate Consultancy, IT Services, Video Production & Entertainment, Healthcare, and related consulting 
               services. The specific services provided will be detailed in individual service 
               agreements or statements of work.
             </p>

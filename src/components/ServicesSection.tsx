@@ -19,7 +19,7 @@ const sectors = [
   },
   {
     icon: Film,
-    title: "Video Production & Entertainment",
+    title: "CIONIX Media",
     description: "End-to-end content production, professional video creation, YouTube channel management, and entertainment media services that captivate audiences.",
     color: "from-purple-500 to-pink-500",
     link: "#",

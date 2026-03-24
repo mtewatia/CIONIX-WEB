@@ -41,8 +41,8 @@
     --radius: 0.5rem;
 
     /* RYSE Custom tokens */
-    --hero-dark: 225 35% 8%;
-    --hero-overlay: 225 30% 10%;
+    --hero-dark: 225 30% 14%;
+    --hero-overlay: 225 25% 16%;
     
     /* Orange gradient matching RYSE exactly: #fb5106 -> #ff8503 */
     --gradient-orange: linear-gradient(135deg, #fb5106 0%, #ff8503 100%);

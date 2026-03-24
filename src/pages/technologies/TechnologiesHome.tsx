@@ -1,14 +1,18 @@
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
+import TechUrgencyBanner from "@/components/technologies/TechUrgencyBanner";
 import TechHero from "@/components/technologies/TechHero";
 import TechStats from "@/components/technologies/TechStats";
 import TechServices from "@/components/technologies/TechServices";
+import TechMidCTA from "@/components/technologies/TechMidCTA";
+import TechTestimonials from "@/components/technologies/TechTestimonials";
 import TechWhyChoose from "@/components/technologies/TechWhyChoose";
 import TechDifferentiator from "@/components/technologies/TechDifferentiator";
 import TechStack from "@/components/technologies/TechStack";
 import TechIndustries from "@/components/technologies/TechIndustries";
 import TechBlog from "@/components/technologies/TechBlog";
 import TechFinalCTA from "@/components/technologies/TechFinalCTA";
+import TechFloatingCTA from "@/components/technologies/TechFloatingCTA";
 
 const navLinks = [
   { name: "Home", href: "/technologies" },
@@ -20,6 +24,7 @@ const navLinks = [
 const TechnologiesHome = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <TechUrgencyBanner />
       <SectorHeader
         sectorName="Technologies"
         sectorColor="from-primary to-ryse-orange-light"
@@ -31,12 +36,15 @@ const TechnologiesHome = () => {
       <TechHero />
       <TechStats />
       <TechServices />
+      <TechMidCTA />
+      <TechTestimonials />
       <TechWhyChoose />
       <TechDifferentiator />
       <TechStack />
       <TechIndustries />
       <TechBlog />
       <TechFinalCTA />
+      <TechFloatingCTA />
 
       <SectorFooter
         sectorName="Technologies"

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoWhite from "@/assets/logo-white.png";
 
 interface NavItem {
   name: string;
@@ -46,8 +47,8 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          <Link to={homePath} className="font-heading font-bold text-xl flex items-center gap-2">
-            <span className="text-white">CIONIX</span>
+          <Link to={homePath} className="flex items-center gap-2">
+            <img src={logoWhite} alt="CIONIX" className="h-7" />
             <span className="text-sm font-medium px-2 py-0.5 rounded-full bg-white/20 text-white">
               {sectorName}
             </span>

@@ -57,6 +57,7 @@ const App = () => (
             {/* CIONIX Technologies */}
             <Route path="/technologies" element={<TechnologiesHome />} />
             <Route path="/technologies/services" element={<TechnologiesServices />} />
+            <Route path="/technologies/services/:serviceId" element={<TechServicePage />} />
             <Route path="/technologies/contact" element={<TechnologiesContact />} />
             <Route path="/technologies/blog" element={<TechnologiesBlog />} />
             <Route path="/technologies/blog/:blogId" element={<SectorBlogDetail />} />

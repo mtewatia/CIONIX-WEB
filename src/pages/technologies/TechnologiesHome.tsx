@@ -61,11 +61,12 @@ const TechnologiesHome = () => {
         sectorName="Technologies"
         description="CIONIX Technologies delivers AI-driven web, mobile, and digital solutions for businesses worldwide."
         serviceLinks={[
-          { name: "Web Development", href: "/technologies/services" },
-          { name: "Mobile Apps", href: "/technologies/services" },
-          { name: "GEO Optimization", href: "/technologies/services" },
-          { name: "AI & Automation", href: "/technologies/services" },
-          { name: "Cloud & DevOps", href: "/technologies/services" },
+          { name: "Web Development", href: "/technologies/services/web-development" },
+          { name: "Mobile Apps", href: "/technologies/services/mobile-app-development" },
+          { name: "GEO Optimization", href: "/technologies/services/geo-optimization" },
+          { name: "AI & Automation", href: "/technologies/services/ai-automation" },
+          { name: "Digital Marketing", href: "/technologies/services/digital-marketing" },
+          { name: "Cloud & DevOps", href: "/technologies/services/cloud-devops" },
         ]}
         quickLinks={[
           { name: "Home", href: "/technologies" },

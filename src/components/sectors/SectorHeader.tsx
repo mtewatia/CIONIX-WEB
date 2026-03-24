@@ -16,6 +16,7 @@ interface SectorHeaderProps {
   navLinks: NavItem[];
   contactHref: string;
   homePath: string;
+  headerBg?: string;
 }
 
 const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath }: SectorHeaderProps) => {

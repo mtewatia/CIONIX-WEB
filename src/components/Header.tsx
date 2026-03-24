@@ -42,7 +42,7 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to="/">
-            <img src={isScrolled ? logoBlack : logoWhite} alt="CIONIX" className="h-8" />
+            <img src={logoWhite} alt="CIONIX" className="h-8" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

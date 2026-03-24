@@ -58,8 +58,8 @@ export default {
         ryse: {
           orange: "#fb5106",
           "orange-light": "#ff8503",
-          dark: "#141625",
-          "dark-light": "#1a1d2e",
+          dark: "#1e2235",
+          "dark-light": "#252940",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

@@ -35,8 +35,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg py-4" : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-ryse-dark ${
+        isScrolled ? "shadow-lg py-4" : "py-6"
       }`}
     >
       <div className="container-custom">
@@ -56,9 +56,7 @@ const Header = () => {
                 {link.href.startsWith("/") ? (
                   <Link
                     to={link.href}
-                    className={`text-sm font-semibold transition-colors duration-300 hover:text-ryse-orange flex items-center gap-1 ${
-                      isScrolled ? "text-foreground" : "text-white"
-                    }`}
+                    className={`text-sm font-semibold transition-colors duration-300 hover:text-ryse-orange flex items-center gap-1 text-white`}
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
@@ -66,9 +64,7 @@ const Header = () => {
                 ) : (
                   <a
                     href={link.href}
-                    className={`text-sm font-semibold transition-colors duration-300 hover:text-ryse-orange flex items-center gap-1 ${
-                      isScrolled ? "text-foreground" : "text-white"
-                    }`}
+                    className={`text-sm font-semibold transition-colors duration-300 hover:text-ryse-orange flex items-center gap-1 text-white`}
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="h-4 w-4" />}
@@ -104,7 +100,7 @@ const Header = () => {
           </div>
 
           <button
-            className={`lg:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

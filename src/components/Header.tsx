@@ -64,9 +64,7 @@ const Header = () => {
                 ) : (
                   <a
                     href={link.href}
-                    className={`text-sm font-semibold transition-colors duration-300 hover:text-ryse-orange flex items-center gap-1 ${
-                      isScrolled ? "text-foreground" : "text-white"
-                    }`}
+                    className={`text-sm font-semibold transition-colors duration-300 hover:text-ryse-orange flex items-center gap-1 text-white`}
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="h-4 w-4" />}

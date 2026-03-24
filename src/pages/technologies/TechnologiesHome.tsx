@@ -16,7 +16,18 @@ import TechFloatingCTA from "@/components/technologies/TechFloatingCTA";
 
 const navLinks = [
   { name: "Home", href: "/technologies" },
-  { name: "Services", href: "/technologies/services" },
+  {
+    name: "Services",
+    href: "/technologies/services",
+    children: [
+      { name: "Web Development", href: "/technologies/services/web-development" },
+      { name: "Mobile App Development", href: "/technologies/services/mobile-app-development" },
+      { name: "AI & Automation", href: "/technologies/services/ai-automation" },
+      { name: "GEO Optimization", href: "/technologies/services/geo-optimization" },
+      { name: "Digital Marketing", href: "/technologies/services/digital-marketing" },
+      { name: "Cloud & DevOps", href: "/technologies/services/cloud-devops" },
+    ],
+  },
   { name: "Blog", href: "/technologies/blog" },
   { name: "Contact", href: "/technologies/contact" },
 ];
@@ -50,11 +61,12 @@ const TechnologiesHome = () => {
         sectorName="Technologies"
         description="CIONIX Technologies delivers AI-driven web, mobile, and digital solutions for businesses worldwide."
         serviceLinks={[
-          { name: "Web Development", href: "/technologies/services" },
-          { name: "Mobile Apps", href: "/technologies/services" },
-          { name: "GEO Optimization", href: "/technologies/services" },
-          { name: "AI & Automation", href: "/technologies/services" },
-          { name: "Cloud & DevOps", href: "/technologies/services" },
+          { name: "Web Development", href: "/technologies/services/web-development" },
+          { name: "Mobile Apps", href: "/technologies/services/mobile-app-development" },
+          { name: "GEO Optimization", href: "/technologies/services/geo-optimization" },
+          { name: "AI & Automation", href: "/technologies/services/ai-automation" },
+          { name: "Digital Marketing", href: "/technologies/services/digital-marketing" },
+          { name: "Cloud & DevOps", href: "/technologies/services/cloud-devops" },
         ]}
         quickLinks={[
           { name: "Home", href: "/technologies" },

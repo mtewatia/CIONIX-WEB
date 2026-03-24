@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import TechnologiesHome from "./pages/technologies/TechnologiesHome";
 import TechnologiesServices from "./pages/technologies/TechnologiesServices";
+import TechServicePage from "./pages/technologies/TechServicePage";
 import TechnologiesContact from "./pages/technologies/TechnologiesContact";
 import TechnologiesBlog from "./pages/technologies/TechnologiesBlog";
 import MediaHome from "./pages/media/MediaHome";
@@ -56,6 +57,7 @@ const App = () => (
             {/* CIONIX Technologies */}
             <Route path="/technologies" element={<TechnologiesHome />} />
             <Route path="/technologies/services" element={<TechnologiesServices />} />
+            <Route path="/technologies/services/:serviceId" element={<TechServicePage />} />
             <Route path="/technologies/contact" element={<TechnologiesContact />} />
             <Route path="/technologies/blog" element={<TechnologiesBlog />} />
             <Route path="/technologies/blog/:blogId" element={<SectorBlogDetail />} />

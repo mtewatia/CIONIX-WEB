@@ -1,12 +1,13 @@
 import { Globe, Smartphone, Bot, Search, BarChart3, Cloud, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
-  { icon: Globe, title: "Web Development", desc: "High-performance websites & scalable web apps built for speed, SEO, and conversions." },
-  { icon: Smartphone, title: "Mobile App Development", desc: "iOS & Android apps designed for engagement and growth." },
-  { icon: Bot, title: "AI & Automation", desc: "Custom AI chatbots, workflow automation, and intelligent systems." },
-  { icon: Search, title: "GEO Optimization", desc: "Rank in AI search engines like ChatGPT & Google SGE." },
-  { icon: BarChart3, title: "Digital Marketing", desc: "SEO, paid ads, and content strategies that generate leads." },
-  { icon: Cloud, title: "Cloud & DevOps", desc: "Secure, scalable infrastructure and deployment pipelines." },
+  { icon: Globe, title: "Web Development", desc: "High-performance websites & scalable web apps built for speed, SEO, and conversions.", id: "web-development" },
+  { icon: Smartphone, title: "Mobile App Development", desc: "iOS & Android apps designed for engagement and growth.", id: "mobile-app-development" },
+  { icon: Bot, title: "AI & Automation", desc: "Custom AI chatbots, workflow automation, and intelligent systems.", id: "ai-automation" },
+  { icon: Search, title: "GEO Optimization", desc: "Rank in AI search engines like ChatGPT & Google SGE.", id: "geo-optimization" },
+  { icon: BarChart3, title: "Digital Marketing", desc: "SEO, paid ads, and content strategies that generate leads.", id: "digital-marketing" },
+  { icon: Cloud, title: "Cloud & DevOps", desc: "Secure, scalable infrastructure and deployment pipelines.", id: "cloud-devops" },
 ];
 
 const TechServices = () => (
@@ -23,9 +24,10 @@ const TechServices = () => (
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, i) => (
-          <div
+          <Link
             key={i}
-            className="group relative bg-background border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 shadow-sm hover:shadow-lg overflow-hidden"
+            to={`/technologies/services/${service.id}`}
+            className="group relative bg-background border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 shadow-sm hover:shadow-lg overflow-hidden block"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative z-10">
@@ -38,7 +40,7 @@ const TechServices = () => (
               </h3>
               <p className="text-muted-foreground leading-relaxed text-sm">{service.desc}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -58,15 +58,13 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
             <Link to="/" className="text-sm font-medium transition-colors text-white/70 hover:text-white">
               ← Main Site
             </Link>
-              ← Main Site
-            </Link>
             <Button size="default" asChild>
               <Link to={contactHref}>Get a Quote</Link>
             </Button>
           </div>
 
           <button
-            className={`lg:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

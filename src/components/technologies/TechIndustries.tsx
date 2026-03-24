@@ -9,13 +9,13 @@ const industries = [
 ];
 
 const TechIndustries = () => (
-  <section className="relative py-24 md:py-32 bg-[#0a0b14]">
+  <section className="relative py-24 md:py-32 bg-ryse-dark-light">
     <div className="container-custom">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <p className="text-purple-400 text-sm uppercase tracking-widest font-semibold mb-4">Industries</p>
+        <p className="section-subtitle">Industries</p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-6">
           Powering Growth Across{" "}
-          <span className="bg-gradient-to-r from-purple-400 to-primary bg-clip-text text-transparent">Industries</span>
+          <span className="gradient-text">Industries</span>
         </h2>
       </div>
 
@@ -23,10 +23,10 @@ const TechIndustries = () => (
         {industries.map((item, i) => (
           <div
             key={i}
-            className="group bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-6 text-center hover:border-purple-500/25 transition-all duration-500 hover:-translate-y-1"
+            className="group bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-6 text-center hover:border-primary/25 transition-all duration-500 hover:-translate-y-1"
           >
-            <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-purple-500/15 to-primary/15 flex items-center justify-center mb-4 group-hover:from-purple-500/25 group-hover:to-primary/25 transition-all duration-300">
-              <item.icon className="h-7 w-7 text-purple-400 group-hover:text-purple-300 transition-colors" />
+            <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary/15 to-ryse-orange-light/15 flex items-center justify-center mb-4 group-hover:from-primary/25 group-hover:to-ryse-orange-light/25 transition-all duration-300">
+              <item.icon className="h-7 w-7 text-primary group-hover:text-ryse-orange-light transition-colors" />
             </div>
             <h3 className="text-white font-bold text-sm mb-2">{item.name}</h3>
             <p className="text-white/35 text-xs leading-relaxed">{item.desc}</p>

@@ -6,7 +6,19 @@ import { ArrowRight, Globe, Smartphone, Search, BarChart3, Cpu, Cloud, Code, Pal
 
 const navLinks = [
   { name: "Home", href: "/technologies" },
-  { name: "Services", href: "/technologies/services" },
+  {
+    name: "Services",
+    href: "/technologies/services",
+    children: [
+      { name: "Web Development", href: "/technologies/services/web-development" },
+      { name: "Mobile App Development", href: "/technologies/services/mobile-app-development" },
+      { name: "AI & Automation", href: "/technologies/services/ai-automation" },
+      { name: "GEO Optimization", href: "/technologies/services/geo-optimization" },
+      { name: "Digital Marketing", href: "/technologies/services/digital-marketing" },
+      { name: "Cloud & DevOps", href: "/technologies/services/cloud-devops" },
+    ],
+  },
+  { name: "Blog", href: "/technologies/blog" },
   { name: "Contact", href: "/technologies/contact" },
 ];
 

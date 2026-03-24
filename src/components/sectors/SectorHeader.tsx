@@ -29,15 +29,13 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-white shadow-lg py-3" : "bg-transparent py-5"
+      isScrolled ? "bg-secondary shadow-lg py-3" : "bg-secondary/90 backdrop-blur-sm py-5"
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to={homePath} className="font-heading font-bold text-xl flex items-center gap-2">
-            <span className={isScrolled ? "text-ryse-dark" : "text-white"}>CIONIX</span>
-            <span className={`text-sm font-medium px-2 py-0.5 rounded-full ${
-              isScrolled ? "bg-primary/10 text-primary" : "bg-white/20 text-white"
-            }`}>
+            <span className="text-white">CIONIX</span>
+            <span className="text-sm font-medium px-2 py-0.5 rounded-full bg-white/20 text-white">
               {sectorName}
             </span>
           </Link>
@@ -47,9 +45,9 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
               <Link
                 key={link.name}
                 to={link.href}
-                className={`text-sm font-semibold transition-colors duration-300 hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-white"
-                } ${location.pathname === link.href ? "text-primary" : ""}`}
+                className={`text-sm font-semibold transition-colors duration-300 hover:text-primary text-white/80 ${
+                  location.pathname === link.href ? "text-primary" : ""
+                }`}
               >
                 {link.name}
               </Link>
@@ -57,9 +55,7 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/" className={`text-sm font-medium transition-colors ${
-              isScrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
-            }`}>
+            <Link to="/" className="text-sm font-medium transition-colors text-white/70 hover:text-white">
               ← Main Site
             </Link>
             <Button size="default" asChild>
@@ -68,7 +64,7 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
           </div>
 
           <button
-            className={`lg:hidden p-2 ${isScrolled ? "text-foreground" : "text-white"}`}
+            className="lg:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

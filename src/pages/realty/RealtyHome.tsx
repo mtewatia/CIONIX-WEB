@@ -50,7 +50,7 @@ const services = [
 const RealtyHome = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/contact" homePath="/realty" />
+      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/contact" homePath="/realty" headerBg="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" />
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">

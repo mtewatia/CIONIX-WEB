@@ -6,7 +6,17 @@ import { Youtube, Film, Camera, Mic, Palette, BarChart3, Megaphone, Wand2, Arrow
 
 const navLinks = [
   { name: "Home", href: "/media" },
-  { name: "Services", href: "/media/services" },
+  {
+    name: "Services",
+    href: "/media/services",
+    children: [
+      { name: "YouTube Automation", href: "/media/services" },
+      { name: "Video Production", href: "/media/services" },
+      { name: "Content Production", href: "/media/services" },
+      { name: "Podcast Production", href: "/media/services" },
+    ],
+  },
+  { name: "Blog", href: "/media/blog" },
   { name: "Contact", href: "/media/contact" },
 ];
 

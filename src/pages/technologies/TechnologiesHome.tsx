@@ -42,6 +42,7 @@ const TechnologiesHome = () => {
         navLinks={navLinks}
         contactHref="/technologies/contact"
         homePath="/technologies"
+        headerBg="bg-background"
       />
 
       <TechHero />

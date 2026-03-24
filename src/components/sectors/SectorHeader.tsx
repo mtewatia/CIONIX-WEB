@@ -31,14 +31,11 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "bg-secondary shadow-lg py-3" : "bg-secondary/90 backdrop-blur-sm py-5"
     }`}>
-    }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to={homePath} className="font-heading font-bold text-xl flex items-center gap-2">
-            <span className={isScrolled ? "text-ryse-dark" : "text-white"}>CIONIX</span>
-            <span className={`text-sm font-medium px-2 py-0.5 rounded-full ${
-              isScrolled ? "bg-primary/10 text-primary" : "bg-white/20 text-white"
-            }`}>
+            <span className="text-white">CIONIX</span>
+            <span className="text-sm font-medium px-2 py-0.5 rounded-full bg-white/20 text-white">
               {sectorName}
             </span>
           </Link>
@@ -48,9 +45,9 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
               <Link
                 key={link.name}
                 to={link.href}
-                className={`text-sm font-semibold transition-colors duration-300 hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-white"
-                } ${location.pathname === link.href ? "text-primary" : ""}`}
+                className={`text-sm font-semibold transition-colors duration-300 hover:text-primary text-white/80 ${
+                  location.pathname === link.href ? "text-primary" : ""
+                }`}
               >
                 {link.name}
               </Link>

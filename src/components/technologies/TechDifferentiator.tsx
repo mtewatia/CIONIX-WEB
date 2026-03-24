@@ -3,18 +3,17 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BrainCircuit, SearchCheck, TrendingUp } from "lucide-react";
 
 const TechDifferentiator = () => (
-  <section className="relative py-24 md:py-32 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-ryse-dark via-secondary to-ryse-dark" />
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/8 rounded-full blur-[150px]" />
+  <section className="relative py-24 md:py-32 overflow-hidden bg-foreground">
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[150px]" />
 
     <div className="container-custom relative z-10">
       <div className="max-w-4xl mx-auto text-center mb-16">
         <p className="section-subtitle">Competitive Edge</p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-primary-foreground mb-6">
           AI + GEO ={" "}
           <span className="gradient-text">Your Competitive Advantage</span>
         </h2>
-        <p className="text-white/45 text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-primary-foreground/50 text-lg max-w-2xl mx-auto leading-relaxed">
           While competitors rely on outdated SEO, CIONIX positions your brand where it matters — inside AI-generated search results, recommended answers, and automated discovery.
         </p>
       </div>
@@ -37,12 +36,12 @@ const TechDifferentiator = () => (
             desc: "Data-driven funnels, conversion optimization, and scalable tech architecture.",
           },
         ].map((item, i) => (
-          <div key={i} className="relative group bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] rounded-2xl p-8 hover:border-primary/30 transition-all duration-500">
+          <div key={i} className="relative group bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500">
             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-ryse-orange-light flex items-center justify-center mb-6 shadow-lg">
-              <item.icon className="h-7 w-7 text-white" />
+              <item.icon className="h-7 w-7 text-primary-foreground" />
             </div>
-            <h3 className="text-xl font-bold font-heading text-white mb-3">{item.title}</h3>
-            <p className="text-white/40 text-sm leading-relaxed">{item.desc}</p>
+            <h3 className="text-xl font-bold font-heading text-primary-foreground mb-3">{item.title}</h3>
+            <p className="text-primary-foreground/50 text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>

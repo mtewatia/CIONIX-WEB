@@ -29,7 +29,7 @@ const TechHero = () => {
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
         size: Math.random() * 2 + 0.5,
-        opacity: Math.random() * 0.5 + 0.1,
+        opacity: Math.random() * 0.3 + 0.1,
       });
     }
 
@@ -55,7 +55,7 @@ const TechHero = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(251, 81, 6, ${0.08 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(251, 81, 6, ${0.06 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -72,34 +72,33 @@ const TechHero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden hero-section">
-      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px]" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-accent/8 blur-[130px]" />
-      <div className="absolute top-[40%] left-[30%] w-[300px] h-[300px] rounded-full bg-ryse-orange-light/5 blur-[100px]" />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
+      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/5 blur-[150px]" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-accent/5 blur-[130px]" />
 
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
 
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
         }}
       />
 
       <div className="container-custom relative z-10 pt-32 pb-32">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5 mb-8 animate-fade-up">
+          <div className="inline-flex items-center gap-2 bg-primary/5 border border-primary/10 rounded-full px-5 py-2.5 mb-8 animate-fade-up">
             <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-white/70 text-sm font-medium tracking-wide">AI-Powered Digital Solutions</span>
+            <span className="text-muted-foreground text-sm font-medium tracking-wide">AI-Powered Digital Solutions</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-[1.08] text-white mb-8 animate-fade-up animation-delay-100">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-[1.08] text-foreground mb-8 animate-fade-up animation-delay-100">
             Build, Scale & Dominate with{" "}
             <span className="gradient-text">AI-Driven Digital Solutions</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto leading-relaxed mb-12 animate-fade-up animation-delay-200">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12 animate-fade-up animation-delay-200">
             We help startups, enterprises, and Web3 brands grow faster with high-performance web apps, mobile solutions, AI automation, and Generative Engine Optimization (GEO).
           </p>
 
@@ -110,7 +109,7 @@ const TechHero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white/15 text-white/80 hover:bg-white/5 hover:text-white rounded-full px-8 py-6 text-base backdrop-blur-sm transition-all duration-300" asChild>
+            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full px-8 py-6 text-base transition-all duration-300" asChild>
               <Link to="/technologies/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Get Free Strategy Call
@@ -120,7 +119,7 @@ const TechHero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-secondary to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

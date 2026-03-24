@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoBlack from "@/assets/logo-black.png";
 import logoWhite from "@/assets/logo-white.png";
 
 
@@ -43,7 +42,7 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to="/">
-            <img src={isScrolled ? logoBlack : logoWhite} alt="CIONIX" className="h-8" />
+            <img src={logoWhite} alt="CIONIX" className="h-8" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">

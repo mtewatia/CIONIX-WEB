@@ -23,27 +23,14 @@ const MediaHero = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-heading text-white leading-[1.05] mb-8">
-            Build, Scale &{" "}
+            Build Media That{" "}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Monetize
-            </span>{" "}
-            Media That{" "}
-            <span className="relative inline-block">
-              Prints Revenue
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
-                <path d="M2 10C50 4 100 2 150 6C200 10 250 4 298 8" stroke="url(#grad)" strokeWidth="3" strokeLinecap="round" />
-                <defs>
-                  <linearGradient id="grad" x1="0" y1="0" x2="300" y2="0">
-                    <stop offset="0%" stopColor="#a855f7" />
-                    <stop offset="100%" stopColor="#ec4899" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              Drives Revenue
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-white/50 leading-relaxed mb-10 max-w-2xl mx-auto">
-            We help creators, brands, and businesses build powerful YouTube channels, viral content systems, and scalable media assets using AI, automation, and high-performance production.
+            We help creators and brands scale YouTube channels, content systems, and digital media using AI, automation, and high-performance production.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-16">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
+import logoWhite from "@/assets/logo-white.png";
 
 interface FooterLink {
   name: string;

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoBlack from "@/assets/logo-black.png";
 import logoWhite from "@/assets/logo-white.png";
 
 

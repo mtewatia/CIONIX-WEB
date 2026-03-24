@@ -23,9 +23,9 @@ const SectorFooter = ({ sectorName, description, serviceLinks, quickLinks, email
       <div className="container-custom">
         <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="font-heading font-bold text-xl mb-4 block">
-              <span className="text-white">CIONIX</span>
-              <span className="text-primary ml-2 text-sm">{sectorName}</span>
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <img src={logoWhite} alt="CIONIX" className="h-7" />
+              <span className="text-primary text-sm font-medium">{sectorName}</span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">{description}</p>
             <div className="flex items-center gap-3">

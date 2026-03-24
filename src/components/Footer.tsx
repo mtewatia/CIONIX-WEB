@@ -16,8 +16,8 @@ const Footer = () => {
       <div className="container-custom">
         <div className="py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="lg:col-span-1">
-            <Link to="/" className="font-heading font-bold text-2xl mb-6 block">
-              <span className="text-white">CIONIX</span>
+            <Link to="/" className="mb-6 block">
+              <img src={logoWhite} alt="CIONIX" className="h-8" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               CIONIX Innovations Services LLC — a multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.

@@ -19,7 +19,7 @@ interface SectorHeaderProps {
   headerBg?: string;
 }
 
-const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath }: SectorHeaderProps) => {
+const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath, headerBg }: SectorHeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -42,10 +42,12 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const bgStyle = headerBg
+    ? `${headerBg} ${isScrolled ? "shadow-lg" : ""}`
+    : isScrolled ? "bg-secondary shadow-lg" : "bg-secondary/90 backdrop-blur-sm";
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-secondary shadow-lg py-3" : "bg-secondary/90 backdrop-blur-sm py-5"
-    }`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${bgStyle} ${isScrolled ? "py-3" : "py-5"}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link to={homePath} className="flex items-center gap-2">

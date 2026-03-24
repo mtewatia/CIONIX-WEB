@@ -38,6 +38,7 @@ const MediaHome = () => {
         navLinks={navLinks}
         contactHref="/media/contact"
         homePath="/media"
+        headerBg="bg-[#0a0a1a]"
       />
 
       <MediaHero />

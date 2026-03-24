@@ -55,9 +55,9 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/" className={`text-sm font-medium transition-colors ${
-              isScrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"
-            }`}>
+            <Link to="/" className="text-sm font-medium transition-colors text-white/70 hover:text-white">
+              ← Main Site
+            </Link>
               ← Main Site
             </Link>
             <Button size="default" asChild>

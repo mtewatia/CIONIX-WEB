@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import TechnologiesHome from "./pages/technologies/TechnologiesHome";
 import TechnologiesServices from "./pages/technologies/TechnologiesServices";
+import TechServicePage from "./pages/technologies/TechServicePage";
 import TechnologiesContact from "./pages/technologies/TechnologiesContact";
 import TechnologiesBlog from "./pages/technologies/TechnologiesBlog";
 import MediaHome from "./pages/media/MediaHome";

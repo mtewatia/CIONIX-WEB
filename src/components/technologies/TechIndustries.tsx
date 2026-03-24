@@ -9,11 +9,11 @@ const industries = [
 ];
 
 const TechIndustries = () => (
-  <section className="relative py-24 md:py-32 bg-ryse-dark-light">
+  <section className="relative py-24 md:py-32 bg-muted/50">
     <div className="container-custom">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <p className="section-subtitle">Industries</p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-foreground mb-6">
           Powering Growth Across{" "}
           <span className="gradient-text">Industries</span>
         </h2>
@@ -23,13 +23,13 @@ const TechIndustries = () => (
         {industries.map((item, i) => (
           <div
             key={i}
-            className="group bg-white/[0.03] backdrop-blur-sm border border-white/[0.06] rounded-2xl p-6 text-center hover:border-primary/25 transition-all duration-500 hover:-translate-y-1"
+            className="group bg-background border border-border rounded-2xl p-6 text-center hover:border-primary/25 transition-all duration-500 hover:-translate-y-1 shadow-sm hover:shadow-md"
           >
-            <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary/15 to-ryse-orange-light/15 flex items-center justify-center mb-4 group-hover:from-primary/25 group-hover:to-ryse-orange-light/25 transition-all duration-300">
+            <div className="w-14 h-14 mx-auto rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-all duration-300">
               <item.icon className="h-7 w-7 text-primary group-hover:text-ryse-orange-light transition-colors" />
             </div>
-            <h3 className="text-white font-bold text-sm mb-2">{item.name}</h3>
-            <p className="text-white/35 text-xs leading-relaxed">{item.desc}</p>
+            <h3 className="text-foreground font-bold text-sm mb-2">{item.name}</h3>
+            <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>

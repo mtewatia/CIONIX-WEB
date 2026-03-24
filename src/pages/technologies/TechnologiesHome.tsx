@@ -19,7 +19,7 @@ const navLinks = [
 
 const TechnologiesHome = () => {
   return (
-    <div className="min-h-screen bg-secondary overflow-x-hidden">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <SectorHeader
         sectorName="Technologies"
         sectorColor="from-primary to-ryse-orange-light"

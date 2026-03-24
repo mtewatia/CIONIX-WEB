@@ -117,6 +117,8 @@ const TechHero = () => {
               </Link>
             </Button>
           </div>
+
+          <TechTrustBadges />
         </div>
       </div>
 

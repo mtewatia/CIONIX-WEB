@@ -54,6 +54,9 @@ const MediaHome = () => {
         sectorPath="/media"
         accentColor="from-purple-500 to-pink-500"
         accentText="text-purple-400"
+        bgClass="bg-[#0a0a1a]"
+        cardClass="bg-[#12122a] border border-white/10 rounded-2xl"
+        textClass="dark"
       />
 
       <MediaFinalCTA />

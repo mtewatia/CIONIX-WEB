@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { sendContactEmailToAdmin } from "@/services/emailService";
 
 const navLinks = [
   { name: "Home", href: "/realty" },
@@ -15,12 +16,36 @@ const navLinks = [
 
 const RealtyContact = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", interest: "", budget: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Inquiry Submitted!", description: "Our real estate advisor will contact you within 24 hours." });
-    setFormData({ name: "", email: "", phone: "", interest: "", budget: "", message: "" });
+    setLoading(true);
+
+    try {
+      await sendContactEmailToAdmin({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.interest,
+        message: formData.message,
+      }, "realty@cionix.com");
+
+      toast({ 
+        title: "Inquiry Submitted!", 
+        description: "Thank you for your interest. Our real estate advisor will contact you within 24 hours. Check your email for updates." 
+      });
+      setFormData({ name: "", email: "", phone: "", interest: "", budget: "", message: "" });
+    } catch (error) {
+      toast({ 
+        title: "Error", 
+        description: "Failed to submit inquiry. Please contact us directly at realty@cionix.com",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -68,8 +93,8 @@ const RealtyContact = () => {
                   <option value="above-5cr">Above ₹5 Crore</option>
                 </select>
                 <Textarea placeholder="Tell us about your property requirements..." value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={5} required />
-                <Button type="submit" size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white">
-                  Submit Inquiry <ArrowRight className="ml-2 h-5 w-5" />
+                <Button type="submit" size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white" disabled={loading}>
+                  {loading ? "Submitting..." : "Submit Inquiry"} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </form>
             </div>

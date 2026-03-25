@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { sendContactEmailToAdmin } from "@/services/emailService";
 
 const navLinks = [
   { name: "Home", href: "/medline" },
@@ -15,12 +16,37 @@ const navLinks = [
 
 const MedlineContact = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", practice: "", specialty: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Assessment Request Sent!", description: "Our healthcare billing team will contact you within 24 hours." });
-    setFormData({ name: "", email: "", phone: "", practice: "", specialty: "", message: "" });
+    setLoading(true);
+
+    try {
+      await sendContactEmailToAdmin({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.practice,
+        service: formData.specialty,
+        message: formData.message,
+      }, "medline@cionix.com");
+
+      toast({ 
+        title: "Assessment Request Sent!", 
+        description: "Thank you for your submission. Our healthcare billing team will contact you within 24 hours. Watch your email for updates." 
+      });
+      setFormData({ name: "", email: "", phone: "", practice: "", specialty: "", message: "" });
+    } catch (error) {
+      toast({ 
+        title: "Error", 
+        description: "Failed to submit request. Please contact us directly at medline@cionix.com",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -68,8 +94,8 @@ const MedlineContact = () => {
                   <option value="other">Other</option>
                 </select>
                 <Textarea placeholder="Tell us about your practice and current billing challenges..." value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={5} required />
-                <Button type="submit" size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white">
-                  Request Free Assessment <ArrowRight className="ml-2 h-5 w-5" />
+                <Button type="submit" size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white" disabled={loading}>
+                  {loading ? "Submitting..." : "Request Free Assessment"} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </form>
             </div>

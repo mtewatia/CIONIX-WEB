@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { sendContactEmailToAdmin } from "@/services/emailService";
 
 const navLinks = [
   { name: "Home", href: "/technologies" },
@@ -22,17 +23,39 @@ const contactInfo = [
 
 const TechnologiesContact = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", company: "", service: "", message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+    setLoading(true);
+
+    try {
+      await sendContactEmailToAdmin({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        service: formData.service,
+        message: formData.message,
+      }, "tech@cionix.com");
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your interest. Our tech team will get back to you within 24 hours. Watch your email for updates.",
+      });
+      setFormData({ name: "", email: "", phone: "", company: "", service: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please contact us directly at tech@cionix.com",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -138,8 +161,8 @@ const TechnologiesContact = () => {
                   <label className="block text-sm font-semibold text-foreground mb-2">Project Details *</label>
                   <Textarea placeholder="Tell us about your project, timeline, and budget..." rows={5} required value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
                 </div>
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message <ArrowRight className="ml-2 h-5 w-5" />
+                <Button type="submit" size="lg" className="w-full" disabled={loading}>
+                  {loading ? "Sending..." : "Send Message"} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </form>
             </div>

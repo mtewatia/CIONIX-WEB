@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { sendContactEmailToAdmin } from "@/services/emailService";
 
 const navLinks = [
   { name: "Home", href: "/media" },
@@ -25,12 +26,36 @@ const navLinks = [
 
 const MediaContact = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", service: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Message Sent!", description: "Our media team will get back to you within 24 hours." });
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    setLoading(true);
+
+    try {
+      await sendContactEmailToAdmin({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+      }, "media@cionix.com");
+
+      toast({ 
+        title: "Message Sent!", 
+        description: "Thank you! Our media team will get back to you within 24 hours. Check your email for further updates." 
+      });
+      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+    } catch (error) {
+      toast({ 
+        title: "Error", 
+        description: "Failed to send message. Please contact us directly at media@cionix.com",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -75,8 +100,8 @@ const MediaContact = () => {
                   </select>
                 </div>
                 <Textarea placeholder="Tell us about your project..." value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={5} required />
-                <Button type="submit" size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white">
-                  Send Message <ArrowRight className="ml-2 h-5 w-5" />
+                <Button type="submit" size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white" disabled={loading}>
+                  {loading ? "Sending..." : "Send Message"} <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </form>
             </div>

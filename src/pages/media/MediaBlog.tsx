@@ -26,7 +26,7 @@ const MediaBlog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Media" sectorColor="from-purple-500 to-pink-500" navLinks={navLinks} contactHref="/media/contact" homePath="/media" />
+      <SectorHeader sectorName="Media" sectorColor="from-purple-500 to-pink-500" navLinks={navLinks} contactHref="/media/services" homePath="/media" />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-purple-900 via-violet-900 to-fuchsia-900 text-white">
         <div className="container-custom text-center">

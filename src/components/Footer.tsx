@@ -19,7 +19,7 @@ const Footer = () => {
               <img src={logoWhite} alt="CIONIX" className="h-8" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              CIONIX Innovations Services LLC — a multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.
+              Four specialized companies — each with decades of industry expertise — united under one trusted brand. Technology. Media. Healthcare. Real Estate. All under CIONIX.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (

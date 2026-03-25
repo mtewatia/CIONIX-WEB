@@ -9,27 +9,28 @@ const AboutOverview = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Content */}
           <div>
-            <p className="section-subtitle">About CIONIX</p>
+            <p className="section-subtitle">The CIONIX Story</p>
             <h2 className="section-title text-foreground">
-              One Enterprise. <span className="gradient-text">Four Sectors.</span> Infinite Possibilities.
+              Separate Experts. <span className="gradient-text">One Powerful Brand.</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              CIONIX Innovations Services LLC was founded with a singular vision — to build a multi-sector 
-              powerhouse that delivers world-class solutions across Real Estate, IT Services, 
-              Video Production & Entertainment, and Healthcare. Each division operates with 
-              deep domain expertise, unified under one brand.
+              CIONIX isn't a single company trying to do it all — it's a collective of specialized firms, 
+              each with decades of expertise in their respective industries. Our technology leaders, media 
+              producers, healthcare specialists, and real estate advisors have been operating independently 
+              for years. Now, they've come together under one trusted name to deliver cross-sector 
+              excellence that was never possible before.
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2.5 shrink-0" />
                 <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">Our Vision:</span> To become a globally trusted enterprise that transforms industries through innovation, integrity, and impact.
+                  <span className="font-semibold text-foreground">Industry Veterans:</span> Each division is led by seasoned professionals with 10+ years of domain experience — not generalists, but true specialists.
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2.5 shrink-0" />
                 <p className="text-muted-foreground">
-                  <span className="font-semibold text-foreground">Global Mindset:</span> Serving clients across the USA, Middle East, and beyond — with teams operating 24/7 to deliver results without borders.
+                  <span className="font-semibold text-foreground">Unified Advantage:</span> When you work with one division, you gain access to the expertise of all four — creating synergies that independent firms simply can't offer.
                 </p>
               </div>
             </div>

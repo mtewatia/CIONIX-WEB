@@ -44,7 +44,7 @@ const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText, bgClass
               </div>
               <div className="p-6">
                 <span className={`text-sm font-semibold ${accentText}`}>{post.category}</span>
-                <h3 className="text-lg font-bold font-heading mt-2 mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                <h3 className={`text-lg font-bold font-heading mt-2 mb-3 group-hover:text-primary transition-colors line-clamp-2 ${textClass ? "text-white" : "text-foreground"}`}>
                   {post.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{post.excerpt}</p>

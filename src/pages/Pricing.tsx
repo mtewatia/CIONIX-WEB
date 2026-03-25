@@ -163,7 +163,7 @@ const Pricing = () => {
                   <a href="mailto:info@cionix.com">
                     {plan.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             ))}

@@ -94,7 +94,7 @@ const Header = () => {
 
           <div className="hidden lg:block">
             <Button size="default" asChild>
-              <a href="mailto:info@cionix.com">Get Started</a>
+              <a href="mailto:info@cionix.com">Book a Call</a>
             </Button>
           </div>
 
@@ -121,7 +121,7 @@ const Header = () => {
                 )
               )}
               <Button size="lg" className="mt-4" asChild>
-                <a href="mailto:info@cionix.com" onClick={() => setIsMobileMenuOpen(false)}>Get Started</a>
+                <a href="mailto:info@cionix.com" onClick={() => setIsMobileMenuOpen(false)}>Book a Call</a>
               </Button>
             </div>
           </nav>

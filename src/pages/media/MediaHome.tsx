@@ -35,7 +35,7 @@ const MediaHome = () => {
         sectorName="Media"
         sectorColor="from-purple-500 to-pink-500"
         navLinks={navLinks}
-        contactHref="/media/contact"
+        contactHref="/media/services"
         homePath="/media"
         headerBg="bg-[#0a0a1a]"
       />

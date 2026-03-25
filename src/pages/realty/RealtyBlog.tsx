@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Home", href: "/realty" },
   { name: "Services", href: "/realty/services" },
   { name: "Blog", href: "/realty/blog" },
-  { name: "Contact", href: "/realty/contact" },
 ];
 
 const RealtyBlog = () => {

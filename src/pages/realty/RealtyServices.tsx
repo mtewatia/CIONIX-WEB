@@ -104,7 +104,7 @@ const RealtyServices = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Ready to Invest in Real Estate?</h2>
           <p className="text-white/70 text-lg mb-8">Get personalized property recommendations and investment insights from our expert advisors.</p>
           <Button size="lg" className="bg-white text-blue-900 hover:bg-white/90" asChild>
-            <Link to="/realty/contact">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:realty@cionix.com">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>

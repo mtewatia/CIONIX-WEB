@@ -152,7 +152,7 @@ const ServiceDetail = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link to="/contact">Start Your Journey</Link>
+              <a href="mailto:info@cionix.com">Start Your Journey</a>
             </Button>
             <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
               <Link to="/pricing">Explore Plans</Link>

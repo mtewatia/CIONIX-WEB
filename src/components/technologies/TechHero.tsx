@@ -105,16 +105,16 @@ const TechHero = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up animation-delay-300">
             <Button size="lg" className="btn-ryse rounded-full px-8 py-6 text-base" asChild>
-              <Link to="/technologies/contact">
+              <a href="mailto:tech@cionix.com">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </Button>
             <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted rounded-full px-8 py-6 text-base transition-all duration-300" asChild>
-              <Link to="/technologies/contact">
+              <a href="mailto:tech@cionix.com">
                 <Phone className="mr-2 h-5 w-5" />
                 Get Free Strategy Call
-              </Link>
+              </a>
             </Button>
           </div>
 

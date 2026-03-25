@@ -69,7 +69,7 @@ const BlogDetail = () => {
           <div className="card-ryse p-8 text-center mb-16">
             <h3 className="text-2xl font-bold font-heading mb-4">Ready to Transform Your Growth Strategy?</h3>
             <p className="text-muted-foreground mb-6">Let's discuss how we can help you implement these strategies.</p>
-            <Button size="lg" asChild><Link to="/contact">Get in Touch</Link></Button>
+            <Button size="lg" asChild><a href="mailto:info@cionix.com">Get in Touch</a></Button>
           </div>
         </div>
       </article>

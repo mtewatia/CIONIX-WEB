@@ -31,6 +31,12 @@ app.post("/api/contact", async (req, res) => {
   }
 
   try {
+    console.log("📧 Attempting to send emails from:", SENDER_EMAIL);
+    console.log("📬 To admin:", admin_email || process.env.VITE_ADMIN_EMAIL);
+    console.log("🔐 SMTP Host:", process.env.HOSTINGER_SMTP_HOST);
+    console.log("🔐 SMTP User configured:", !!process.env.HOSTINGER_SMTP_USER);
+    console.log("🔐 SMTP Pass configured:", !!process.env.HOSTINGER_SMTP_PASS);
+
     // Admin notification
     await transporter.sendMail({
       from: SENDER_EMAIL,
@@ -46,6 +52,8 @@ app.post("/api/contact", async (req, res) => {
       `,
     });
 
+    console.log("✅ Admin email sent successfully");
+
     // User confirmation email
     await transporter.sendMail({
       from: SENDER_EMAIL,
@@ -54,10 +62,12 @@ app.post("/api/contact", async (req, res) => {
       text: `Hi ${name},\n\nThank you for your message. Our team has received your query and will contact you soon.\n\nBest regards,\nCIONIX Team`,
     });
 
+    console.log("✅ User confirmation email sent successfully");
     res.json({ status: "ok" });
   } catch (error) {
-    console.error("Error sending emails", error);
-    res.status(500).json({ error: "Failed to send email" });
+    console.error("❌ Error sending emails:", error.message);
+    console.error("Full error:", error);
+    res.status(500).json({ error: "Failed to send email: " + error.message });
   }
 });
 

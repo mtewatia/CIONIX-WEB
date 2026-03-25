@@ -35,7 +35,7 @@ const sectors = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="section-padding bg-muted/50">
+    <section id="our-sectors" className="section-padding bg-muted/50">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

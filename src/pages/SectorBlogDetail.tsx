@@ -1,11 +1,11 @@
 import { useParams, Link, useLocation } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock, User, Share2, Linkedin, Twitter, Facebook } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectorHeader from "@/components/sectors/SectorHeader";
 import SectorFooter from "@/components/sectors/SectorFooter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getBlogById } from "@/data/blogPosts";
+import { useBlogPostBySlug, formatDate } from "@/hooks/useBlogPosts";
 
 const sectorConfig: Record<string, { name: string; color: string; navLinks: { name: string; href: string }[]; contactHref: string; homePath: string; footerDesc: string; email: string; phone: string; location: string }> = {
   technologies: {
@@ -74,12 +74,25 @@ const SectorBlogDetail = () => {
   const { blogId } = useParams();
   const location = useLocation();
   const pathParts = location.pathname.split("/");
-  const sectorKey = pathParts[1]; // technologies, media, medline, realty
+  const sectorKey = pathParts[1];
   const config = sectorConfig[sectorKey];
-  const post = getBlogById(blogId || "");
+  const { data: post, isLoading } = useBlogPostBySlug(blogId || "", sectorKey);
 
   const isMainSite = !config;
   const backPath = isMainSite ? "/blog" : `/${sectorKey}/blog`;
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background">
+        {isMainSite ? <Header /> : (
+          <SectorHeader sectorName={config.name} sectorColor={config.color} navLinks={config.navLinks} contactHref={config.contactHref} homePath={config.homePath} />
+        )}
+        <div className="container-custom section-padding text-center pt-32">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!post) {
     return (
@@ -106,7 +119,7 @@ const SectorBlogDetail = () => {
       )}
 
       <div className="relative h-[50vh] min-h-[400px]">
-        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+        <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
       </div>
 
@@ -121,12 +134,14 @@ const SectorBlogDetail = () => {
             <p className="text-lg text-muted-foreground mb-6">{post.excerpt}</p>
             <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t">
               <div className="flex items-center gap-3">
-                <img src={post.authorImage} alt={post.author} className="w-12 h-12 rounded-full object-cover" />
+                {post.author_image && (
+                  <img src={post.author_image} alt={post.author} className="w-12 h-12 rounded-full object-cover" />
+                )}
                 <div>
                   <p className="font-semibold">{post.author}</p>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{post.date}</span>
-                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{post.readTime}</span>
+                    <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{formatDate(post.created_at)}</span>
+                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{post.read_time}</span>
                   </div>
                 </div>
               </div>
@@ -139,7 +154,9 @@ const SectorBlogDetail = () => {
             </div>
           </div>
 
-          <div className="prose prose-lg max-w-none mb-16 prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-blockquote:italic prose-strong:text-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
+          {post.content && (
+            <div className="prose prose-lg max-w-none mb-16 prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-blockquote:italic prose-strong:text-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
+          )}
 
           <div className="card-ryse p-8 text-center mb-16">
             <h3 className="text-2xl font-bold font-heading mb-4">Interested in Learning More?</h3>

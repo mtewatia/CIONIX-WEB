@@ -1,19 +1,38 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock, User, Linkedin, Twitter, Facebook } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { getBlogById, sectorBadgeColors } from "@/data/blogPosts";
+import { useBlogPostBySlug, formatDate } from "@/hooks/useBlogPosts";
+
+const sectorBadgeColors: Record<string, string> = {
+  technologies: "bg-primary/10 text-primary",
+  media: "bg-purple-500/10 text-purple-600",
+  medline: "bg-emerald-500/10 text-emerald-600",
+  realty: "bg-blue-500/10 text-blue-600",
+};
 
 const BlogDetail = () => {
   const { blogId } = useParams();
-  const post = getBlogById(blogId || "");
+  const { data: post, isLoading } = useBlogPostBySlug(blogId || "");
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="container-custom section-padding text-center pt-32">
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!post) {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container-custom section-padding text-center">
+        <div className="container-custom section-padding text-center pt-32">
           <h1 className="text-3xl font-bold mb-4">Post Not Found</h1>
           <p className="text-muted-foreground mb-8">The blog post you're looking for doesn't exist.</p>
           <Button asChild><Link to="/blog">Back to Blog</Link></Button>
@@ -28,7 +47,7 @@ const BlogDetail = () => {
       <Header />
 
       <div className="relative h-[50vh] min-h-[400px]">
-        <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+        <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
       </div>
 
@@ -40,18 +59,20 @@ const BlogDetail = () => {
             </Link>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-primary font-semibold">{post.category}</span>
-              <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${sectorBadgeColors[post.sector]}`}>{post.sectorLabel}</span>
+              <span className={`px-2 py-0.5 text-xs font-medium rounded-full ${sectorBadgeColors[post.sector] || ""}`}>{post.sector_label}</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold font-heading mt-2 mb-4">{post.title}</h1>
             <p className="text-lg text-muted-foreground mb-6">{post.excerpt}</p>
             <div className="flex items-center justify-between flex-wrap gap-4 pt-6 border-t">
               <div className="flex items-center gap-3">
-                <img src={post.authorImage} alt={post.author} className="w-12 h-12 rounded-full object-cover" />
+                {post.author_image && (
+                  <img src={post.author_image} alt={post.author} className="w-12 h-12 rounded-full object-cover" />
+                )}
                 <div>
                   <p className="font-semibold">{post.author}</p>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{post.date}</span>
-                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{post.readTime}</span>
+                    <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />{formatDate(post.created_at)}</span>
+                    <span className="flex items-center gap-1"><Clock className="h-4 w-4" />{post.read_time}</span>
                   </div>
                 </div>
               </div>
@@ -64,7 +85,9 @@ const BlogDetail = () => {
             </div>
           </div>
 
-          <div className="prose prose-lg max-w-none mb-16 prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-blockquote:italic prose-strong:text-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
+          {post.content && (
+            <div className="prose prose-lg max-w-none mb-16 prose-headings:font-heading prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-blockquote:italic prose-strong:text-foreground" dangerouslySetInnerHTML={{ __html: post.content }} />
+          )}
 
           <div className="card-ryse p-8 text-center mb-16">
             <h3 className="text-2xl font-bold font-heading mb-4">Ready to Transform Your Growth Strategy?</h3>

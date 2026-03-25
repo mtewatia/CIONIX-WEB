@@ -7,7 +7,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ServiceDetail from "./pages/ServiceDetail";
-import Pricing from "./pages/Pricing";
+
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";

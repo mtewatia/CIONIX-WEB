@@ -23,7 +23,7 @@ const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText, bgClass
           <h2 className={`section-title ${textClass ? "text-white" : "text-foreground"}`}>
             Latest From Our <span className={`bg-gradient-to-r ${accentColor} bg-clip-text text-transparent`}>Blog</span>
           </h2>
-          <p className="text-muted-foreground text-lg mt-4">
+          <p className={`text-lg mt-4 ${textClass ? "text-white/50" : "text-muted-foreground"}`}>
             Stay informed with the latest insights, trends, and best practices from our experts.
           </p>
         </div>

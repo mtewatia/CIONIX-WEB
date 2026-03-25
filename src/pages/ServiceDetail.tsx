@@ -101,7 +101,7 @@ const ServiceDetail = () => {
                   <a href="mailto:info@cionix.com">
                     Get a Free Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button variant="outline" className="w-full" size="lg" asChild>
                   <Link to="/pricing">View Pricing</Link>

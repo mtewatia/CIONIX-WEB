@@ -10,36 +10,28 @@ import { ArrowRight } from "lucide-react";
 
 const faqs = [
   {
-    question: "What sectors does CIONIX operate in?",
-    answer: "CIONIX operates across four key sectors: Real Estate Consultancy, IT Services (Web Development, App Development, GEO, Digital Marketing), Video Production & Entertainment (Content Production, YouTube Management), and Healthcare (Medical Billing for USA doctors and healthcare IT)."
+    question: "What does CIONIX specialize in?",
+    answer: "CIONIX specializes in IT services and media-driven growth, helping businesses build digital platforms, scale content, and generate revenue through technology and content systems."
   },
   {
-    question: "Will each sector have its own dedicated website?",
-    answer: "Yes! Each sector will soon have its own specialized website with in-depth information, case studies, and sector-specific resources. This main site serves as the central hub for CIONIX's complete offerings."
+    question: "What services do you offer?",
+    answer: "We offer IT Services (web/app development, marketing, UI/UX), Video Production & Media (content, YouTube, brand films), Healthcare Solutions (medical billing & RCM), and Real Estate Consultancy (investment & advisory)."
   },
   {
-    question: "What is GEO (Generative Engine Optimization)?",
-    answer: "GEO is the practice of optimizing your content to appear in AI-generated responses from platforms like ChatGPT, Google AI Overviews, and Perplexity. It's part of our IT Services sector and ensures your brand is visible in the AI search ecosystem."
+    question: "Can I hire you only for IT or media services?",
+    answer: "Yes. Most clients start with IT or media services, and expand into other areas as their business grows."
   },
   {
-    question: "How does your Medical Billing service work?",
-    answer: "Our Healthcare division provides end-to-end medical billing services for USA-based physicians. We handle claims processing, revenue cycle management, compliance, denial management, and reporting — all with HIPAA-compliant processes."
+    question: "Do you build custom solutions or use templates?",
+    answer: "We build fully customized solutions tailored to your business goals, ensuring better performance, scalability, and long-term growth."
   },
   {
-    question: "Can I engage CIONIX for services across multiple sectors?",
-    answer: "Absolutely. That's one of our key advantages. Whether you need a website built, a marketing campaign, a property consultation, and medical billing — we handle it all under one roof with dedicated specialists per sector."
+    question: "Do you help with growth and marketing after development?",
+    answer: "Yes. We combine development + content + marketing, so your business not only gets built but also attracts traffic, leads, and revenue."
   },
   {
-    question: "Where is CIONIX based?",
-    answer: "CIONIX Innovations Services LLC operates internationally with teams serving clients across North America, the Middle East, Europe, and South Asia. Our distributed model allows us to provide 24/7 support across time zones."
-  },
-  {
-    question: "How do I get started with CIONIX?",
-    answer: "Simply reach out through our contact page or schedule a free consultation. We'll understand your needs, recommend the right sector team, and create a tailored plan for your project."
-  },
-  {
-    question: "What makes CIONIX different from single-sector agencies?",
-    answer: "Unlike niche agencies, CIONIX offers cross-sector synergy. Your real estate client can get a website, marketing, video content, and billing solutions — all coordinated by one team that understands your business holistically."
+    question: "How do I get started?",
+    answer: "Simply click \"Book Consultation\" on the website. Our team will review your requirements and get back to you with the next steps."
   }
 ];
 

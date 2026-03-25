@@ -80,7 +80,7 @@ const MedlineServices = () => {
                 <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">{service.title}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{service.description}</p>
                 <Button asChild>
-                  <Link to="/medline/contact">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <a href="mailto:medline@cionix.com">Get Started <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
               </div>
               <div className={`bg-muted/50 rounded-2xl p-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>

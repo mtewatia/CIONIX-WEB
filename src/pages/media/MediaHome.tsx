@@ -71,7 +71,6 @@ const MediaHome = () => {
         quickLinks={[
           { name: "Home", href: "/media" },
           { name: "Services", href: "/media/services" },
-          { name: "Contact", href: "/media/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="media@cionix.com"

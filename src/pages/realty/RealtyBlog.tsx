@@ -67,7 +67,7 @@ const RealtyBlog = () => {
         </div>
       </section>
 
-      <SectorFooter sectorName="Realty" description="CIONIX Realty offers expert real estate advisory and investment consulting services." serviceLinks={[{ name: "Residential Advisory", href: "/realty/services" }, { name: "Investment Consulting", href: "/realty/services" }]} quickLinks={[{ name: "Home", href: "/realty" }, { name: "Blog", href: "/realty/blog" }, { name: "Contact", href: "/realty/contact" }, { name: "Main Site", href: "/" }]} email="realty@cionix.com" phone="+1 (555) 456-7890" location="Dubai, UAE" />
+      <SectorFooter sectorName="Realty" description="CIONIX Realty offers expert real estate advisory and investment consulting services." serviceLinks={[{ name: "Residential Advisory", href: "/realty/services" }, { name: "Investment Consulting", href: "/realty/services" }]} quickLinks={[{ name: "Home", href: "/realty" }, { name: "Blog", href: "/realty/blog" }, { name: "Main Site", href: "/" }]} email="realty@cionix.com" phone="+1 (555) 456-7890" location="Dubai, UAE" />
     </div>
   );
 };

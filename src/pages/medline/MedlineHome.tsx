@@ -192,7 +192,6 @@ const MedlineHome = () => {
         quickLinks={[
           { name: "Home", href: "/medline" },
           { name: "Services", href: "/medline/services" },
-          { name: "Contact", href: "/medline/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="medline@cionix.com"

@@ -109,7 +109,7 @@ const MedlineServices = () => {
         </div>
       </section>
 
-      <SectorFooter sectorName="Medline" description="CIONIX Medline provides specialized medical billing and healthcare revenue solutions." serviceLinks={[{ name: "Medical Billing", href: "/medline/services" }, { name: "Revenue Cycle Mgmt", href: "/medline/services" }, { name: "Compliance", href: "/medline/services" }]} quickLinks={[{ name: "Home", href: "/medline" }, { name: "Services", href: "/medline/services" }, { name: "Contact", href: "/medline/contact" }, { name: "Main Site", href: "/" }]} email="medline@cionix.com" phone="+1 (555) 345-6789" location="Dubai, UAE" />
+      <SectorFooter sectorName="Medline" description="CIONIX Medline provides specialized medical billing and healthcare revenue solutions." serviceLinks={[{ name: "Medical Billing", href: "/medline/services" }, { name: "Revenue Cycle Mgmt", href: "/medline/services" }, { name: "Compliance", href: "/medline/services" }]} quickLinks={[{ name: "Home", href: "/medline" }, { name: "Services", href: "/medline/services" }, { name: "Main Site", href: "/" }]} email="medline@cionix.com" phone="+1 (555) 345-6789" location="Dubai, UAE" />
     </div>
   );
 };

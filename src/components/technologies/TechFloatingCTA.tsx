@@ -27,7 +27,7 @@ const TechFloatingCTA = () => {
           <a href="mailto:tech@cionix.com">
             Book Free Call
             <ArrowRight className="ml-1.5 h-4 w-4" />
-          </Link>
+          </a>
         </Button>
         <button
           onClick={() => setDismissed(true)}

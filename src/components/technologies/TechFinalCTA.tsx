@@ -26,7 +26,7 @@ const TechFinalCTA = () => (
           <a href="mailto:tech@cionix.com">
             <MessageSquare className="mr-2 h-5 w-5" />
             Talk to Our Experts
-          </Link>
+          </a>
         </Button>
       </div>
     </div>

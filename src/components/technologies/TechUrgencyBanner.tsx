@@ -15,12 +15,12 @@ const TechUrgencyBanner = () => {
             Only <span className="text-primary font-bold">{spotsLeft} spots</span> left for Q2 2026 projects
           </span>
           <span className="hidden sm:inline text-primary-foreground/40">•</span>
-          <Link
-            to="/technologies/contact"
+          <a
+            href="mailto:tech@cionix.com"
             className="hidden sm:inline underline underline-offset-2 hover:text-primary transition-colors"
           >
             Reserve yours now →
-          </Link>
+          </a>
         </div>
       </div>
     </div>

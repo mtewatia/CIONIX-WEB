@@ -22,7 +22,7 @@ const TechMidCTA = () => (
           <a href="mailto:tech@cionix.com">
             Claim Your Free Call
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          </a>
         </Button>
       </div>
     </div>

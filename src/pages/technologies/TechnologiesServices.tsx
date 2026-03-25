@@ -171,7 +171,6 @@ const TechnologiesServices = () => {
         quickLinks={[
           { name: "Home", href: "/technologies" },
           { name: "Services", href: "/technologies/services" },
-          { name: "Contact", href: "/technologies/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="tech@cionix.com"

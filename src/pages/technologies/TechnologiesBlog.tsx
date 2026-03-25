@@ -67,7 +67,7 @@ const TechnologiesBlog = () => {
         </div>
       </section>
 
-      <SectorFooter sectorName="Technologies" description="CIONIX Technologies delivers cutting-edge web, mobile, AI, and digital marketing solutions." serviceLinks={[{ name: "Web Development", href: "/technologies/services" }, { name: "GEO Optimization", href: "/technologies/services" }]} quickLinks={[{ name: "Home", href: "/technologies" }, { name: "Blog", href: "/technologies/blog" }, { name: "Contact", href: "/technologies/contact" }, { name: "Main Site", href: "/" }]} email="tech@cionix.com" phone="+1 (234) 567-890" location="San Francisco, CA" />
+      <SectorFooter sectorName="Technologies" description="CIONIX Technologies delivers cutting-edge web, mobile, AI, and digital marketing solutions." serviceLinks={[{ name: "Web Development", href: "/technologies/services" }, { name: "GEO Optimization", href: "/technologies/services" }]} quickLinks={[{ name: "Home", href: "/technologies" }, { name: "Blog", href: "/technologies/blog" }, { name: "Main Site", href: "/" }]} email="tech@cionix.com" phone="+1 (234) 567-890" location="San Francisco, CA" />
     </div>
   );
 };

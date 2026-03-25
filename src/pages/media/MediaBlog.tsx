@@ -76,7 +76,7 @@ const MediaBlog = () => {
         </div>
       </section>
 
-      <SectorFooter sectorName="Media" description="CIONIX Media delivers end-to-end media production and YouTube automation services." serviceLinks={[{ name: "YouTube Automation", href: "/media/services" }, { name: "Video Production", href: "/media/services" }]} quickLinks={[{ name: "Home", href: "/media" }, { name: "Blog", href: "/media/blog" }, { name: "Contact", href: "/media/contact" }, { name: "Main Site", href: "/" }]} email="media@cionix.com" phone="+1 (555) 234-5678" location="Dubai, UAE" />
+      <SectorFooter sectorName="Media" description="CIONIX Media delivers end-to-end media production and YouTube automation services." serviceLinks={[{ name: "YouTube Automation", href: "/media/services" }, { name: "Video Production", href: "/media/services" }]} quickLinks={[{ name: "Home", href: "/media" }, { name: "Blog", href: "/media/blog" }, { name: "Main Site", href: "/" }]} email="media@cionix.com" phone="+1 (555) 234-5678" location="Dubai, UAE" />
     </div>
   );
 };

@@ -188,7 +188,6 @@ const RealtyHome = () => {
         quickLinks={[
           { name: "Home", href: "/realty" },
           { name: "Services", href: "/realty/services" },
-          { name: "Contact", href: "/realty/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="realty@cionix.com"

@@ -112,7 +112,7 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
               ← Main Site
             </Link>
             <Button size="default" asChild>
-              <Link to={contactHref}>Get a Quote</Link>
+              <Link to={contactHref}>Book a Call</Link>
             </Button>
           </div>
 

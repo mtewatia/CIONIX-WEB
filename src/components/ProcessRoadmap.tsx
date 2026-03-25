@@ -73,10 +73,10 @@ const ProcessRoadmap = () => {
             How We Work
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 text-foreground">
-            Our Proven <span className="gradient-text">Process</span>
+            How It <span className="gradient-text">Works</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            A consistent framework applied across every sector for predictable, scalable results.
+            One point of contact. Four specialized companies. Seamless collaboration.
           </p>
         </div>
 

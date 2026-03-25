@@ -6,28 +6,28 @@ const sectors = [
   {
     icon: Monitor,
     title: "CIONIX Technologies",
-    description: "Full-spectrum technology solutions including Web & App Development, GEO (Generative Engine Optimization), Content Marketing, Digital Marketing, and more.",
+    description: "A dedicated technology firm with years of experience in Web & App Development, GEO (Generative Engine Optimization), Content Marketing, Digital Marketing, and enterprise solutions — now operating under the CIONIX umbrella.",
     color: "from-primary to-orange-400",
     link: "/technologies",
   },
   {
     icon: Film,
     title: "CIONIX Media",
-    description: "End-to-end content production, professional video creation, YouTube channel management, and entertainment media services that captivate audiences.",
+    description: "An established media production house specializing in end-to-end content creation, professional video production, YouTube channel management, and brand storytelling — trusted by creators and brands for years.",
     color: "from-purple-500 to-pink-500",
     link: "/media",
   },
   {
     icon: HeartPulse,
     title: "CIONIX Medline",
-    description: "Specialized healthcare solutions including Medical Billing services for USA-based doctors, practice management consulting, and healthcare IT integration.",
+    description: "A seasoned healthcare solutions provider with deep expertise in Medical Billing for USA-based physicians, revenue cycle management, practice consulting, and healthcare IT — built on years of compliance-first operations.",
     color: "from-emerald-500 to-teal-500",
     link: "/medline",
   },
   {
     icon: Building2,
     title: "CIONIX Realty",
-    description: "Expert guidance on property investments, market analysis, portfolio management, and strategic real estate advisory for residential and commercial projects.",
+    description: "An experienced real estate advisory firm offering property investment guidance, market analysis, portfolio management, and strategic consulting for residential and commercial projects across key markets.",
     color: "from-blue-500 to-indigo-600",
     link: "/realty",
   },
@@ -39,13 +39,14 @@ const ServicesSection = () => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="section-subtitle">Our Sectors</p>
+          <p className="section-subtitle">Our Companies</p>
           <h2 className="section-title text-foreground">
-            Multi-Sector Excellence Under <span className="gradient-text">One Roof</span>
+            Four Expert Companies. <span className="gradient-text">One Trusted Brand.</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-4">
-            Each sector operates with dedicated expertise and will soon have its own specialized platform. 
-            Explore what Nexora Global brings to every industry we serve.
+            Each CIONIX division is an independent company with its own legacy of excellence — 
+            specialists who've been delivering results in their industry for years, 
+            now united to offer you unmatched cross-sector capability.
           </p>
         </div>
 

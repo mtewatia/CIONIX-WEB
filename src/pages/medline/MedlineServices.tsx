@@ -57,7 +57,7 @@ const services = [
 const MedlineServices = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/contact" homePath="/medline" />
+      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/services" homePath="/medline" />
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
         <div className="container-custom text-center">

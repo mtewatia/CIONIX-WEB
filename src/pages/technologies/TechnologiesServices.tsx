@@ -122,7 +122,7 @@ const TechnologiesServices = () => {
                   <h3 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-foreground">{service.title}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
                   <Button asChild>
-                    <Link to="/technologies/contact">Discuss This Service <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <a href="mailto:tech@cionix.com">Discuss This Service <ArrowRight className="ml-2 h-4 w-4" /></a>
                   </Button>
                 </div>
                 <div className={`bg-muted/50 rounded-2xl p-8 ${i % 2 !== 0 ? "lg:col-start-1" : ""}`}>

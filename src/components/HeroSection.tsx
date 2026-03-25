@@ -104,11 +104,13 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 animate-fade-up animation-delay-300">
-            <Button size="lg">
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" asChild>
+              <a href="mailto:info@cionix.com">
+                Book a Call
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="dark" size="lg">
+            <Button variant="dark" size="lg" onClick={() => document.getElementById('our-sectors')?.scrollIntoView({ behavior: 'smooth' })}>
               <Play className="mr-2 h-5 w-5" />
               Explore Our Sectors
             </Button>

@@ -4,32 +4,36 @@ import { Link } from "react-router-dom";
 
 const sectors = [
   {
-    icon: Building2,
-    title: "Real Estate Consultancy",
-    description: "Property investment advisory, market analysis, portfolio management, and strategic consulting.",
-    services: ["Property Valuation", "Investment Advisory", "Market Research", "Portfolio Management"],
-    color: "from-blue-500 to-indigo-600",
-  },
-  {
     icon: Monitor,
-    title: "IT Services",
+    title: "CIONIX Technologies",
     description: "End-to-end technology solutions from web development to AI-powered marketing.",
     services: ["Web & App Development", "GEO Optimization", "Content Marketing", "Digital Marketing", "UI/UX Design"],
     color: "from-primary to-orange-400",
+    link: "/technologies",
   },
   {
     icon: Film,
-    title: "Video Production & Entertainment",
+    title: "CIONIX Media",
     description: "Professional media production and YouTube channel management for brands.",
     services: ["Video Production", "Content Creation", "YouTube Management", "Brand Films"],
     color: "from-purple-500 to-pink-500",
+    link: "/media",
   },
   {
     icon: HeartPulse,
-    title: "Healthcare",
+    title: "CIONIX Medline",
     description: "Specialized healthcare solutions with a focus on USA medical billing.",
     services: ["Medical Billing", "Revenue Cycle Management", "Practice Consulting", "Healthcare IT"],
     color: "from-emerald-500 to-teal-500",
+    link: "/medline",
+  },
+  {
+    icon: Building2,
+    title: "CIONIX Realty",
+    description: "Property investment advisory, market analysis, portfolio management, and strategic consulting.",
+    services: ["Property Valuation", "Investment Advisory", "Market Research", "Portfolio Management"],
+    color: "from-blue-500 to-indigo-600",
+    link: "/realty",
   },
 ];
 
@@ -71,22 +75,13 @@ const PricingSection = () => {
               </div>
 
               <Button variant="outline" className="w-full" asChild>
-                <Link to="/pricing">
-                  Request a Quote
+                <Link to={sector.link}>
+                  Know More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Button size="lg" asChild>
-            <Link to="/pricing">
-              Schedule a Free Consultation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

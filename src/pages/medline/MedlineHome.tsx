@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Home", href: "/medline" },
   { name: "Services", href: "/medline/services" },
   { name: "Blog", href: "/medline/blog" },
-  { name: "Contact", href: "/medline/contact" },
 ];
 
 const stats = [
@@ -50,7 +49,7 @@ const services = [
 const MedlineHome = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/contact" homePath="/medline" headerBg="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900" />
+      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/services" homePath="/medline" headerBg="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900" />
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 overflow-hidden">
@@ -72,7 +71,7 @@ const MedlineHome = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white" asChild>
-                  <Link to="/medline/contact">Free RCM Assessment <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                  <a href="mailto:medline@cionix.com">Free RCM Assessment <ArrowRight className="ml-2 h-5 w-5" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                   <Link to="/medline/services">Our Services</Link>
@@ -174,7 +173,7 @@ const MedlineHome = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Get a Free Revenue Cycle Assessment</h2>
           <p className="text-white/70 text-lg mb-8">Discover how much revenue your practice is leaving on the table. Our experts will analyze your billing process and identify opportunities for improvement.</p>
           <Button size="lg" className="bg-white text-emerald-900 hover:bg-white/90" asChild>
-            <Link to="/medline/contact">Schedule Free Assessment <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:medline@cionix.com">Schedule Free Assessment <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>
@@ -193,7 +192,6 @@ const MedlineHome = () => {
         quickLinks={[
           { name: "Home", href: "/medline" },
           { name: "Services", href: "/medline/services" },
-          { name: "Contact", href: "/medline/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="medline@cionix.com"

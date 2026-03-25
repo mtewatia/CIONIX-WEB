@@ -1,9 +1,9 @@
 import { Users, Globe, Clock, BarChart3 } from "lucide-react";
 
 const metrics = [
-  { icon: Globe, label: "Global Delivery Model" },
-  { icon: Clock, label: "24/7 Operations" },
-  { icon: BarChart3, label: "Data-Driven Approach" },
+  { icon: Globe, label: "Decades of Combined Expertise" },
+  { icon: Clock, label: "4 Specialized Companies" },
+  { icon: BarChart3, label: "One Trusted Brand" },
 ];
 
 const TrustMetrics = () => {

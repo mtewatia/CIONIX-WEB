@@ -14,12 +14,12 @@ const stats = [
   {
     icon: Layers,
     number: "4",
-    label: "Industry Sectors",
+    label: "Specialized Companies",
   },
   {
     icon: TrendingUp,
-    number: "99%",
-    label: "Client Satisfaction",
+    number: "10+",
+    label: "Years Combined Legacy",
   },
 ];
 

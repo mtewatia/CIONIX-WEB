@@ -8,30 +8,30 @@ import heroSlide3 from "@/assets/hero-slide-3.jpg";
 const slides = [
   {
     image: heroSlide1,
-    subtitle: "Real Estate & IT Services",
-    headline: "One Vision. Multiple Sectors.",
-    highlight: "Limitless",
-    headlineEnd: " Growth.",
+    subtitle: "Decades of Expertise, United",
+    headline: "Industry Leaders.",
+    highlight: "One Trusted",
+    headlineEnd: " Name.",
     description:
-      "From Real Estate & IT Services to Video Production and Healthcare — CIONIX delivers industry-leading solutions across sectors that shape the future.",
+      "Four specialized companies — each with decades of proven expertise in their industry — now united under CIONIX. The same leaders. The same excellence. One powerful brand you can trust.",
   },
   {
     image: heroSlide2,
-    subtitle: "Video Production & Entertainment",
-    headline: "Creative Stories.",
-    highlight: "Powerful",
-    headlineEnd: " Impact.",
+    subtitle: "From Separate Experts to One Force",
+    headline: "Built by Specialists.",
+    highlight: "Backed by",
+    headlineEnd: " Legacy.",
     description:
-      "Content production, YouTube management, and brand storytelling — our media division brings your vision to life with cinematic quality.",
+      "Our technology, media, healthcare, and real estate divisions aren't new ventures — they're established teams with years of track records, now operating together under CIONIX for unmatched synergy.",
   },
   {
     image: heroSlide3,
-    subtitle: "Healthcare & Medical Billing",
-    headline: "Precision Care.",
-    highlight: "Revenue",
-    headlineEnd: " Optimized.",
+    subtitle: "Trust Earned Over Years",
+    headline: "Proven Track Records.",
+    highlight: "Unified",
+    headlineEnd: " Strength.",
     description:
-      "End-to-end medical billing for USA physicians, healthcare IT integration, and HIPAA-compliant digital solutions for modern practices.",
+      "Each CIONIX division is led by industry veterans who've delivered results for years. Together, we bring cross-sector intelligence that no single-industry firm can match.",
   },
 ];
 
@@ -104,11 +104,13 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 animate-fade-up animation-delay-300">
-            <Button size="lg">
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" asChild>
+              <a href="mailto:info@cionix.com">
+                Book a Call
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="dark" size="lg">
+            <Button variant="dark" size="lg" onClick={() => document.getElementById('our-sectors')?.scrollIntoView({ behavior: 'smooth' })}>
               <Play className="mr-2 h-5 w-5" />
               Explore Our Sectors
             </Button>

@@ -15,18 +15,8 @@ import { getBlogsBySector } from "@/data/blogPosts";
 
 const navLinks = [
   { name: "Home", href: "/media" },
-  {
-    name: "Services",
-    href: "/media/services",
-    children: [
-      { name: "YouTube Automation", href: "/media/services" },
-      { name: "Video Production", href: "/media/services" },
-      { name: "Content Production", href: "/media/services" },
-      { name: "Podcast Production", href: "/media/services" },
-    ],
-  },
+  { name: "Services", href: "/media/services" },
   { name: "Blog", href: "/media/blog" },
-  { name: "Contact", href: "/media/contact" },
 ];
 
 const MediaHome = () => {
@@ -36,7 +26,7 @@ const MediaHome = () => {
         sectorName="Media"
         sectorColor="from-purple-500 to-pink-500"
         navLinks={navLinks}
-        contactHref="/media/contact"
+        contactHref="/media/services"
         homePath="/media"
         headerBg="bg-[#0a0a1a]"
       />
@@ -55,6 +45,9 @@ const MediaHome = () => {
         sectorPath="/media"
         accentColor="from-purple-500 to-pink-500"
         accentText="text-purple-400"
+        bgClass="bg-[#0a0a1a]"
+        cardClass="bg-[#12122a] border border-white/10 rounded-2xl"
+        textClass="dark"
       />
 
       <MediaFinalCTA />
@@ -72,7 +65,6 @@ const MediaHome = () => {
         quickLinks={[
           { name: "Home", href: "/media" },
           { name: "Services", href: "/media/services" },
-          { name: "Contact", href: "/media/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="media@cionix.com"

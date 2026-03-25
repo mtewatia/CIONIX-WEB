@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Home", href: "/technologies" },
   { name: "Services", href: "/technologies/services" },
   { name: "Blog", href: "/technologies/blog" },
-  { name: "Contact", href: "/technologies/contact" },
 ];
 
 const TechServicePage = () => {
@@ -28,7 +27,7 @@ const TechServicePage = () => {
         sectorName="Technologies"
         sectorColor="from-primary to-orange-400"
         navLinks={navLinks}
-        contactHref="/technologies/contact"
+        contactHref="/technologies/services"
         homePath="/technologies"
       />
 
@@ -57,10 +56,10 @@ const TechServicePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild>
-                <Link to="/technologies/contact">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <a href="mailto:tech@cionix.com">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/technologies/contact">Book Free Consultation</Link>
+                <a href="mailto:tech@cionix.com">Book Free Consultation</a>
               </Button>
             </div>
           </div>
@@ -251,10 +250,10 @@ const TechServicePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="white" asChild>
-              <Link to="/technologies/contact">Get Free Consultation</Link>
+              <a href="mailto:tech@cionix.com">Get Free Consultation</a>
             </Button>
             <Button size="lg" variant="dark" asChild>
-              <Link to="/technologies/contact">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <a href="mailto:tech@cionix.com">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></a>
             </Button>
           </div>
         </div>
@@ -267,7 +266,6 @@ const TechServicePage = () => {
         quickLinks={[
           { name: "Home", href: "/technologies" },
           { name: "Services", href: "/technologies/services" },
-          { name: "Contact", href: "/technologies/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="tech@cionix.com"

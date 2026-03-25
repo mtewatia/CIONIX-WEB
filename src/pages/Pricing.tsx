@@ -160,10 +160,10 @@ const Pricing = () => {
                   variant={plan.popular ? "default" : "outline"}
                   asChild
                 >
-                  <Link to="/contact">
+                  <a href="mailto:info@cionix.com">
                     {plan.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             ))}
@@ -176,7 +176,7 @@ const Pricing = () => {
               Not sure which plan is right for you? Schedule a free consultation and we'll help you find the perfect fit.
             </p>
             <Button variant="outline" size="lg" asChild>
-              <Link to="/contact">Schedule a Call</Link>
+              <a href="mailto:info@cionix.com">Schedule a Call</a>
             </Button>
           </div>
         </div>

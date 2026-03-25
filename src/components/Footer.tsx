@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
-import { services } from "@/data/services";
 import logoWhite from "@/assets/logo-white.png";
 
 const socialLinks = [
@@ -20,7 +19,7 @@ const Footer = () => {
               <img src={logoWhite} alt="CIONIX" className="h-8" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              CIONIX Innovations Services LLC — a multi-sector enterprise delivering excellence across Real Estate, IT, Media & Entertainment, and Healthcare industries.
+              Four specialized companies — each with decades of industry expertise — united under one trusted brand. Technology. Media. Healthcare. Real Estate. All under CIONIX.
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -34,10 +33,15 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="font-heading font-bold text-lg mb-6">Our Sectors</h4>
             <ul className="space-y-3">
-              {services.slice(0, 6).map((service) => (
-                <li key={service.id}>
-                  <Link to={`/services/${service.id}`} className="text-sm text-white/60 hover:text-ryse-orange transition-colors">
-                    {service.shortTitle}
+              {[
+                { name: "CIONIX Technologies", href: "/technologies" },
+                { name: "CIONIX Media", href: "/media" },
+                { name: "CIONIX Medline", href: "/medline" },
+                { name: "CIONIX Realty", href: "/realty" },
+              ].map((sector) => (
+                <li key={sector.name}>
+                  <Link to={sector.href} className="text-sm text-white/60 hover:text-ryse-orange transition-colors">
+                    {sector.name}
                   </Link>
                 </li>
               ))}
@@ -49,7 +53,6 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { name: "About Us", href: "/about" },
-                { name: "Pricing", href: "/pricing" },
                 { name: "Blog", href: "/blog" },
               ].map((item) => (
                 <li key={item.name}>

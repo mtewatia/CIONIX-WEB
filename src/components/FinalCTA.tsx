@@ -17,13 +17,13 @@ const FinalCTA = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading mb-6 text-white leading-tight">
-            Ready to Work With{" "}
-            <span className="gradient-text">CIONIX?</span>
+            Ready to Leverage{" "}
+            <span className="gradient-text">Decades of Expertise?</span>
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10">
-            Whether it's real estate, technology, media, or healthcare — let's discuss 
-            how we can drive results for your business. Book a free consultation today.
+            Four established companies. One brand. Whether you need technology, media, 
+            healthcare, or real estate expertise — the right specialists are already here.
           </p>
 
           <Button size="xl">

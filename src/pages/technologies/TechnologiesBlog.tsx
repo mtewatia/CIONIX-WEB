@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Home", href: "/technologies" },
   { name: "Services", href: "/technologies/services" },
   { name: "Blog", href: "/technologies/blog" },
-  { name: "Contact", href: "/technologies/contact" },
 ];
 
 const TechnologiesBlog = () => {
@@ -18,7 +17,7 @@ const TechnologiesBlog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Technologies" sectorColor="from-primary to-orange-400" navLinks={navLinks} contactHref="/technologies/contact" homePath="/technologies" />
+      <SectorHeader sectorName="Technologies" sectorColor="from-primary to-orange-400" navLinks={navLinks} contactHref="/technologies/services" homePath="/technologies" />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-ryse-dark via-ryse-dark-light to-ryse-dark text-white">
         <div className="container-custom text-center">
@@ -68,7 +67,7 @@ const TechnologiesBlog = () => {
         </div>
       </section>
 
-      <SectorFooter sectorName="Technologies" description="CIONIX Technologies delivers cutting-edge web, mobile, AI, and digital marketing solutions." serviceLinks={[{ name: "Web Development", href: "/technologies/services" }, { name: "GEO Optimization", href: "/technologies/services" }]} quickLinks={[{ name: "Home", href: "/technologies" }, { name: "Blog", href: "/technologies/blog" }, { name: "Contact", href: "/technologies/contact" }, { name: "Main Site", href: "/" }]} email="tech@cionix.com" phone="+1 (234) 567-890" location="San Francisco, CA" />
+      <SectorFooter sectorName="Technologies" description="CIONIX Technologies delivers cutting-edge web, mobile, AI, and digital marketing solutions." serviceLinks={[{ name: "Web Development", href: "/technologies/services" }, { name: "GEO Optimization", href: "/technologies/services" }]} quickLinks={[{ name: "Home", href: "/technologies" }, { name: "Blog", href: "/technologies/blog" }, { name: "Main Site", href: "/" }]} email="tech@cionix.com" phone="+1 (234) 567-890" location="San Francisco, CA" />
     </div>
   );
 };

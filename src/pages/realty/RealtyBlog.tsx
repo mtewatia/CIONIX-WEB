@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Home", href: "/realty" },
   { name: "Services", href: "/realty/services" },
   { name: "Blog", href: "/realty/blog" },
-  { name: "Contact", href: "/realty/contact" },
 ];
 
 const RealtyBlog = () => {
@@ -18,7 +17,7 @@ const RealtyBlog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/contact" homePath="/realty" />
+      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/services" homePath="/realty" />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
         <div className="container-custom text-center">
@@ -68,7 +67,7 @@ const RealtyBlog = () => {
         </div>
       </section>
 
-      <SectorFooter sectorName="Realty" description="CIONIX Realty offers expert real estate advisory and investment consulting services." serviceLinks={[{ name: "Residential Advisory", href: "/realty/services" }, { name: "Investment Consulting", href: "/realty/services" }]} quickLinks={[{ name: "Home", href: "/realty" }, { name: "Blog", href: "/realty/blog" }, { name: "Contact", href: "/realty/contact" }, { name: "Main Site", href: "/" }]} email="realty@cionix.com" phone="+1 (555) 456-7890" location="Dubai, UAE" />
+      <SectorFooter sectorName="Realty" description="CIONIX Realty offers expert real estate advisory and investment consulting services." serviceLinks={[{ name: "Residential Advisory", href: "/realty/services" }, { name: "Investment Consulting", href: "/realty/services" }]} quickLinks={[{ name: "Home", href: "/realty" }, { name: "Blog", href: "/realty/blog" }, { name: "Main Site", href: "/" }]} email="realty@cionix.com" phone="+1 (555) 456-7890" location="Dubai, UAE" />
     </div>
   );
 };

@@ -98,13 +98,13 @@ const ServiceDetail = () => {
                   Let's discuss how {service.shortTitle} can accelerate your growth.
                 </p>
                 <Button className="w-full mb-3" size="lg" asChild>
-                  <Link to="/contact">
+                  <a href="mailto:info@cionix.com">
                     Get a Free Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button variant="outline" className="w-full" size="lg" asChild>
-                  <Link to="/pricing">View Pricing</Link>
+                  <a href="mailto:info@cionix.com">Know More</a>
                 </Button>
               </div>
 
@@ -152,10 +152,10 @@ const ServiceDetail = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link to="/contact">Start Your Journey</Link>
+              <a href="mailto:info@cionix.com">Start Your Journey</a>
             </Button>
             <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
-              <Link to="/pricing">Explore Plans</Link>
+              <a href="mailto:info@cionix.com">Know More</a>
             </Button>
           </div>
         </div>

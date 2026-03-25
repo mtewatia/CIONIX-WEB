@@ -71,7 +71,7 @@ const MedlineHome = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white" asChild>
-                  <Link to="/medline/contact">Free RCM Assessment <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                  <a href="mailto:medline@cionix.com">Free RCM Assessment <ArrowRight className="ml-2 h-5 w-5" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                   <Link to="/medline/services">Our Services</Link>

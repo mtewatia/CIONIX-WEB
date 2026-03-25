@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "contact-api.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "contact-api.js"
+    }
+  ],
+  "env": {
+    "HOSTINGER_SMTP_HOST": "smtp.hostinger.com",
+    "HOSTINGER_SMTP_PORT": "587",
+    "HOSTINGER_SMTP_SECURE": "false",
+    "HOSTINGER_SMTP_USER": "contact@cionixinnovations.com",
+    "HOSTINGER_SMTP_PASS": "@placeholder_password_replace_in_vercel_dashboard",
+    "VITE_ADMIN_EMAIL": "contact@cionixinnovations.com"
+  }
+}

@@ -20,7 +20,7 @@ const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText, bgClass
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="section-subtitle">Insights & Articles</p>
-          <h2 className="section-title text-foreground">
+          <h2 className={`section-title ${textClass ? "text-white" : "text-foreground"}`}>
             Latest From Our <span className={`bg-gradient-to-r ${accentColor} bg-clip-text text-transparent`}>Blog</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-4">

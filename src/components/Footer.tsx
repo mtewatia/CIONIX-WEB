@@ -34,10 +34,15 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h4 className="font-heading font-bold text-lg mb-6">Our Sectors</h4>
             <ul className="space-y-3">
-              {services.slice(0, 6).map((service) => (
-                <li key={service.id}>
-                  <Link to={`/services/${service.id}`} className="text-sm text-white/60 hover:text-ryse-orange transition-colors">
-                    {service.shortTitle}
+              {[
+                { name: "CIONIX Technologies", href: "/technologies" },
+                { name: "CIONIX Media", href: "/media" },
+                { name: "CIONIX Medline", href: "/medline" },
+                { name: "CIONIX Realty", href: "/realty" },
+              ].map((sector) => (
+                <li key={sector.name}>
+                  <Link to={sector.href} className="text-sm text-white/60 hover:text-ryse-orange transition-colors">
+                    {sector.name}
                   </Link>
                 </li>
               ))}

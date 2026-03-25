@@ -94,7 +94,7 @@ const Header = () => {
 
           <div className="hidden lg:block">
             <Button size="default" asChild>
-              <Link to="/pricing">Get Started</Link>
+              <a href="mailto:info@cionix.com">Get Started</a>
             </Button>
           </div>
 

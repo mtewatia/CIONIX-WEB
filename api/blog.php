@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 $host = getenv('DB_HOST') ?: 'localhost';
-$db   = getenv('DB_NAME') ?: 'YOUR_DB_NAME';
-$user = getenv('DB_USER') ?: 'YOUR_DB_USER';
-$pass = getenv('DB_PASS') ?: 'YOUR_DB_PASSWORD';
+$db   = getenv('DB_NAME') ?: 'u694997230_cionix';
+$user = getenv('DB_USER') ?: 'u694997230_cionixuser';
+$pass = getenv('DB_PASS') ?: 'Cionix@0090';
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {

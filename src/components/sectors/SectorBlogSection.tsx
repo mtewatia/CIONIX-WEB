@@ -47,7 +47,7 @@ const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText, bgClass
                 <h3 className={`text-lg font-bold font-heading mt-2 mb-3 group-hover:text-primary transition-colors line-clamp-2 ${textClass ? "text-white" : "text-foreground"}`}>
                   {post.title}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+                <p className={`text-sm mb-4 line-clamp-2 ${textClass ? "text-white/50" : "text-muted-foreground"}`}>{post.excerpt}</p>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <Calendar className="w-3 h-3" />
                   <span>{post.date}</span>

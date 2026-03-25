@@ -8,7 +8,6 @@ const navLinks = [
   { name: "Home", href: "/technologies" },
   { name: "Services", href: "/technologies/services" },
   { name: "Blog", href: "/technologies/blog" },
-  { name: "Contact", href: "/technologies/contact" },
 ];
 
 const TechnologiesBlog = () => {

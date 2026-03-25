@@ -12,11 +12,11 @@ interface SectorBlogSectionProps {
   textClass?: string; // custom text classes
 }
 
-const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText }: SectorBlogSectionProps) => {
+const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText, bgClass, cardClass, textClass }: SectorBlogSectionProps) => {
   const displayPosts = posts.slice(0, 3);
 
   return (
-    <section className="section-padding bg-muted/50">
+    <section className={`section-padding ${bgClass || "bg-muted/50"}`}>
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="section-subtitle">Insights & Articles</p>

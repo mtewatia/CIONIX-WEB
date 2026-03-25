@@ -27,7 +27,7 @@ const TechServicePage = () => {
         sectorName="Technologies"
         sectorColor="from-primary to-orange-400"
         navLinks={navLinks}
-        contactHref="/technologies/contact"
+        contactHref="/technologies/services"
         homePath="/technologies"
       />
 

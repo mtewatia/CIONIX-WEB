@@ -160,7 +160,7 @@ const Pricing = () => {
                   variant={plan.popular ? "default" : "outline"}
                   asChild
                 >
-                  <Link to="/contact">
+                  <a href="mailto:info@cionix.com">
                     {plan.cta}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

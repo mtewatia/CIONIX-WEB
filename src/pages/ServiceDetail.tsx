@@ -98,7 +98,7 @@ const ServiceDetail = () => {
                   Let's discuss how {service.shortTitle} can accelerate your growth.
                 </p>
                 <Button className="w-full mb-3" size="lg" asChild>
-                  <Link to="/contact">
+                  <a href="mailto:info@cionix.com">
                     Get a Free Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

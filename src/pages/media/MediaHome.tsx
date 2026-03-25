@@ -26,7 +26,6 @@ const navLinks = [
     ],
   },
   { name: "Blog", href: "/media/blog" },
-  { name: "Contact", href: "/media/contact" },
 ];
 
 const MediaHome = () => {

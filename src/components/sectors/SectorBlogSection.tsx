@@ -7,6 +7,9 @@ interface SectorBlogSectionProps {
   sectorPath: string;
   accentColor: string; // gradient class
   accentText: string; // text color class
+  bgClass?: string; // custom background class
+  cardClass?: string; // custom card class
+  textClass?: string; // custom text classes
 }
 
 const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText }: SectorBlogSectionProps) => {

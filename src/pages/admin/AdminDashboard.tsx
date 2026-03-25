@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,27 +17,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  fetchBlogPosts,
+  createBlogPost,
+  updateBlogPost,
+  deleteBlogPost,
+  type ApiBlogPost,
+  type BlogPostFormData,
+} from "@/services/blogApi";
 
-interface BlogPost {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string | null;
-  content: string | null;
-  category: string | null;
-  sector: string;
-  sector_label: string;
-  author: string;
-  author_image: string | null;
-  read_time: string | null;
-  image: string | null;
-  featured: boolean | null;
-  published: boolean | null;
-  created_at: string;
-  updated_at: string;
-}
-
-const emptPost = {
+const emptyPost: BlogPostFormData = {
   slug: "",
   title: "",
   excerpt: "",
@@ -64,42 +52,30 @@ const sectorOptions = [
 const AdminDashboard = () => {
   const { user, isAdmin, loading, signOut } = useAuth();
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
-  const [form, setForm] = useState(emptPost);
+  const [editingPost, setEditingPost] = useState<ApiBlogPost | null>(null);
+  const [form, setForm] = useState<BlogPostFormData>(emptyPost);
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
   const { data: posts = [], isLoading } = useQuery({
     queryKey: ["admin-blog-posts"],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from("blog_posts")
-        .select("*")
-        .order("created_at", { ascending: false });
-      if (error) throw error;
-      return data as BlogPost[];
-    },
+    queryFn: () => fetchBlogPosts(),
     enabled: isAdmin,
   });
 
   const saveMutation = useMutation({
-    mutationFn: async (postData: typeof form) => {
+    mutationFn: async (postData: BlogPostFormData) => {
       if (editingPost) {
-        const { error } = await supabase
-          .from("blog_posts")
-          .update(postData)
-          .eq("id", editingPost.id);
-        if (error) throw error;
+        return updateBlogPost(editingPost.id, postData);
       } else {
-        const { error } = await supabase.from("blog_posts").insert(postData);
-        if (error) throw error;
+        return createBlogPost(postData);
       }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-blog-posts"] });
       setDialogOpen(false);
       setEditingPost(null);
-      setForm(emptPost);
+      setForm(emptyPost);
       toast({ title: editingPost ? "Post updated" : "Post created" });
     },
     onError: (err: any) => {
@@ -107,11 +83,8 @@ const AdminDashboard = () => {
     },
   });
 
-  const deleteMutation = useMutation({
-    mutationFn: async (id: string) => {
-      const { error } = await supabase.from("blog_posts").delete().eq("id", id);
-      if (error) throw error;
-    },
+  const deleteMut = useMutation({
+    mutationFn: (id: number) => deleteBlogPost(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-blog-posts"] });
       toast({ title: "Post deleted" });
@@ -132,11 +105,11 @@ const AdminDashboard = () => {
 
   const openCreate = () => {
     setEditingPost(null);
-    setForm(emptPost);
+    setForm(emptyPost);
     setDialogOpen(true);
   };
 
-  const openEdit = (post: BlogPost) => {
+  const openEdit = (post: ApiBlogPost) => {
     setEditingPost(post);
     setForm({
       slug: post.slug,
@@ -150,8 +123,8 @@ const AdminDashboard = () => {
       author_image: post.author_image || "",
       read_time: post.read_time || "5 min read",
       image: post.image || "",
-      featured: post.featured || false,
-      published: post.published || false,
+      featured: !!post.featured,
+      published: !!post.published,
     });
     setDialogOpen(true);
   };
@@ -163,7 +136,6 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-muted">
-      {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-xl font-bold text-foreground">Blog Dashboard</h1>
@@ -177,7 +149,6 @@ const AdminDashboard = () => {
       </header>
 
       <div className="container mx-auto px-4 py-8">
-        {/* Actions */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-foreground">
             Blog Posts ({posts.length})
@@ -272,7 +243,6 @@ const AdminDashboard = () => {
           </Dialog>
         </div>
 
-        {/* Posts Table */}
         {isLoading ? (
           <p className="text-muted-foreground">Loading posts...</p>
         ) : posts.length === 0 ? (
@@ -328,7 +298,7 @@ const AdminDashboard = () => {
                             size="sm"
                             className="text-destructive hover:text-destructive"
                             onClick={() => {
-                              if (confirm("Delete this post?")) deleteMutation.mutate(post.id);
+                              if (confirm("Delete this post?")) deleteMut.mutate(post.id);
                             }}
                           >
                             <Trash2 className="w-4 h-4" />

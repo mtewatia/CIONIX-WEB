@@ -39,7 +39,7 @@ const TechnologiesHome = () => {
         sectorName="Technologies"
         sectorColor="from-primary to-ryse-orange-light"
         navLinks={navLinks}
-        contactHref="/technologies/contact"
+        contactHref="/technologies/services"
         homePath="/technologies"
         headerBg="bg-secondary"
       />

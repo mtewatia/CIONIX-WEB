@@ -104,7 +104,7 @@ const ServiceDetail = () => {
                   </a>
                 </Button>
                 <Button variant="outline" className="w-full" size="lg" asChild>
-                  <Link to="/pricing">View Pricing</Link>
+                  <a href="mailto:info@cionix.com">Know More</a>
                 </Button>
               </div>
 
@@ -155,7 +155,7 @@ const ServiceDetail = () => {
               <a href="mailto:info@cionix.com">Start Your Journey</a>
             </Button>
             <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10" asChild>
-              <Link to="/pricing">Explore Plans</Link>
+              <a href="mailto:info@cionix.com">Know More</a>
             </Button>
           </div>
         </div>

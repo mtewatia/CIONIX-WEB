@@ -8,7 +8,6 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessRoadmap from "@/components/ProcessRoadmap";
 import FeaturesSection from "@/components/FeaturesSection";
 import StatsSection from "@/components/StatsSection";
-import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import BlogSection from "@/components/BlogSection";
@@ -29,7 +28,6 @@ const Index = () => {
         <ProcessRoadmap />
         <FeaturesSection />
         <StatsSection />
-        <PricingSection />
         <TestimonialsSection />
         <BlogSection />
         <FAQSection />

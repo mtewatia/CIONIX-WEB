@@ -173,7 +173,7 @@ const MedlineHome = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Get a Free Revenue Cycle Assessment</h2>
           <p className="text-white/70 text-lg mb-8">Discover how much revenue your practice is leaving on the table. Our experts will analyze your billing process and identify opportunities for improvement.</p>
           <Button size="lg" className="bg-white text-emerald-900 hover:bg-white/90" asChild>
-            <Link to="/medline/contact">Schedule Free Assessment <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:medline@cionix.com">Schedule Free Assessment <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>

@@ -71,7 +71,7 @@ const MediaServices = () => {
         sectorName="Media"
         sectorColor="from-purple-500 to-pink-500"
         navLinks={navLinks}
-        contactHref="/media/contact"
+        contactHref="/media/services"
         homePath="/media"
       />
 

@@ -250,10 +250,10 @@ const TechServicePage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="white" asChild>
-              <Link to="/technologies/contact">Get Free Consultation</Link>
+              <a href="mailto:tech@cionix.com">Get Free Consultation</a>
             </Button>
             <Button size="lg" variant="dark" asChild>
-              <Link to="/technologies/contact">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <a href="mailto:tech@cionix.com">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></a>
             </Button>
           </div>
         </div>

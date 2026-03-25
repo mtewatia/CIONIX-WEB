@@ -94,7 +94,7 @@ const Header = () => {
 
           <div className="hidden lg:block">
             <Button size="default" asChild>
-              <a href="mailto:info@cionix.com">Get Started</a>
+              <a href="mailto:info@cionix.com">Book a Call</a>
             </Button>
           </div>
 

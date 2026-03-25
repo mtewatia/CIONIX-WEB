@@ -151,7 +151,7 @@ const SectorHeader = ({ sectorName, sectorColor, navLinks, contactHref, homePath
                 ← Back to Main Site
               </Link>
               <Button size="lg" className="mt-4" asChild>
-                <Link to={contactHref} onClick={() => setIsMobileMenuOpen(false)}>Get a Quote</Link>
+                <Link to={contactHref} onClick={() => setIsMobileMenuOpen(false)}>Book a Call</Link>
               </Button>
             </div>
           </nav>

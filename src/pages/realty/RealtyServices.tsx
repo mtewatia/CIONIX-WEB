@@ -7,7 +7,6 @@ import { Home, Building2, TrendingUp, Landmark, MapPin, FileSearch, ArrowRight, 
 const navLinks = [
   { name: "Home", href: "/realty" },
   { name: "Services", href: "/realty/services" },
-  { name: "Contact", href: "/realty/contact" },
 ];
 
 const services = [

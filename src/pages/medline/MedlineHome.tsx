@@ -49,7 +49,7 @@ const services = [
 const MedlineHome = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/contact" homePath="/medline" headerBg="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900" />
+      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/services" homePath="/medline" headerBg="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900" />
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 overflow-hidden">

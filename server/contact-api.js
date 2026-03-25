@@ -26,18 +26,28 @@ const SENDER_EMAIL = process.env.HOSTINGER_SMTP_USER || "contact@cionixinnovatio
 app.post("/api/contact", async (req, res) => {
   const { name, email, phone, company, service, message, admin_email } = req.body;
 
+  console.log("🔔 Contact form received:", { name, email });
+
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
   try {
-    console.log("📧 Attempting to send emails from:", SENDER_EMAIL);
-    console.log("📬 To admin:", admin_email || process.env.VITE_ADMIN_EMAIL);
-    console.log("🔐 SMTP Host:", process.env.HOSTINGER_SMTP_HOST);
-    console.log("🔐 SMTP User configured:", !!process.env.HOSTINGER_SMTP_USER);
-    console.log("🔐 SMTP Pass configured:", !!process.env.HOSTINGER_SMTP_PASS);
+    console.log("📧 SMTP config check:");
+    console.log("  Host:", process.env.HOSTINGER_SMTP_HOST);
+    console.log("  Port:", process.env.HOSTINGER_SMTP_PORT);
+    console.log("  User:", process.env.HOSTINGER_SMTP_USER ? "✅ Set" : "❌ Missing");
+    console.log("  Pass:", process.env.HOSTINGER_SMTP_PASS ? "✅ Set" : "❌ Missing");
+
+    if (!process.env.HOSTINGER_SMTP_USER || !process.env.HOSTINGER_SMTP_PASS) {
+      console.error("❌ SMTP credentials not configured in environment!");
+      return res.status(500).json({ 
+        error: "Email service not configured. Missing SMTP credentials in server environment." 
+      });
+    }
 
     // Admin notification
+    console.log("📬 Sending admin email to:", admin_email || process.env.VITE_ADMIN_EMAIL);
     await transporter.sendMail({
       from: SENDER_EMAIL,
       to: admin_email || process.env.VITE_ADMIN_EMAIL,
@@ -52,9 +62,10 @@ app.post("/api/contact", async (req, res) => {
       `,
     });
 
-    console.log("✅ Admin email sent successfully");
+    console.log("✅ Admin email sent");
 
     // User confirmation email
+    console.log("📬 Sending confirmation to user:", email);
     await transporter.sendMail({
       from: SENDER_EMAIL,
       to: email,
@@ -62,12 +73,14 @@ app.post("/api/contact", async (req, res) => {
       text: `Hi ${name},\n\nThank you for your message. Our team has received your query and will contact you soon.\n\nBest regards,\nCIONIX Team`,
     });
 
-    console.log("✅ User confirmation email sent successfully");
-    res.json({ status: "ok" });
+    console.log("✅ User confirmation sent");
+    res.json({ status: "ok", message: "Email sent successfully" });
   } catch (error) {
-    console.error("❌ Error sending emails:", error.message);
-    console.error("Full error:", error);
-    res.status(500).json({ error: "Failed to send email: " + error.message });
+    console.error("❌ SMTP Error:", error.code, error.message);
+    console.error("Full error object:", error);
+    res.status(500).json({ 
+      error: `Email sending failed: ${error.code || error.message}` 
+    });
   }
 });
 

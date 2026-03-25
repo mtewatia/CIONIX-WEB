@@ -29,7 +29,6 @@ const navLinks = [
     ],
   },
   { name: "Blog", href: "/technologies/blog" },
-  { name: "Contact", href: "/technologies/contact" },
 ];
 
 const TechnologiesHome = () => {

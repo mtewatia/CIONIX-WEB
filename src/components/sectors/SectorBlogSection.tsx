@@ -33,7 +33,7 @@ const SectorBlogSection = ({ posts, sectorPath, accentColor, accentText, bgClass
             <Link
               key={post.id}
               to={`${sectorPath}/blog/${post.id}`}
-              className="card-ryse overflow-hidden group"
+              className={`overflow-hidden group ${cardClass || "card-ryse"}`}
             >
               <div className="aspect-video overflow-hidden">
                 <img

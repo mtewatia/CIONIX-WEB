@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Home", href: "/medline" },
   { name: "Services", href: "/medline/services" },
   { name: "Blog", href: "/medline/blog" },
-  { name: "Contact", href: "/medline/contact" },
 ];
 
 const stats = [

@@ -17,7 +17,7 @@ const TechnologiesBlog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Technologies" sectorColor="from-primary to-orange-400" navLinks={navLinks} contactHref="/technologies/contact" homePath="/technologies" />
+      <SectorHeader sectorName="Technologies" sectorColor="from-primary to-orange-400" navLinks={navLinks} contactHref="/technologies/services" homePath="/technologies" />
 
       <section className="pt-32 pb-16 bg-gradient-to-br from-ryse-dark via-ryse-dark-light to-ryse-dark text-white">
         <div className="container-custom text-center">

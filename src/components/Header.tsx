@@ -121,7 +121,7 @@ const Header = () => {
                 )
               )}
               <Button size="lg" className="mt-4" asChild>
-                <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
+                <a href="mailto:info@cionix.com" onClick={() => setIsMobileMenuOpen(false)}>Get Started</a>
               </Button>
             </div>
           </nav>

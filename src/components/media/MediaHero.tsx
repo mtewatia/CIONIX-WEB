@@ -35,12 +35,12 @@ const MediaHero = () => {
 
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-8 py-6 text-base shadow-[0_0_40px_rgba(168,85,247,0.3)] hover:shadow-[0_0_60px_rgba(168,85,247,0.5)] transition-all" asChild>
-              <Link to="/media/contact">
+              <Link to="/media/services">
                 Start Your Channel <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/5 backdrop-blur-sm px-8 py-6 text-base" asChild>
-              <Link to="/media/contact">
+              <Link to="/media/services">
                 <Play className="mr-2 h-5 w-5" /> Get Free Channel Audit
               </Link>
             </Button>

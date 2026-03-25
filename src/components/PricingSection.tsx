@@ -71,7 +71,7 @@ const PricingSection = () => {
               </div>
 
               <Button variant="outline" className="w-full" asChild>
-                <Link to="/contact">
+                <Link to="/pricing">
                   Request a Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -82,7 +82,7 @@ const PricingSection = () => {
 
         <div className="text-center">
           <Button size="lg" asChild>
-            <Link to="/contact">
+            <Link to="/pricing">
               Schedule a Free Consultation
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

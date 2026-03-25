@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Sectors", href: "#services", hasDropdown: true },
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
 ];
 
 const sectorLinks = [
@@ -95,7 +94,7 @@ const Header = () => {
 
           <div className="hidden lg:block">
             <Button size="default" asChild>
-              <Link to="/contact">Get Started</Link>
+              <Link to="/pricing">Get Started</Link>
             </Button>
           </div>
 
@@ -122,7 +121,7 @@ const Header = () => {
                 )
               )}
               <Button size="lg" className="mt-4" asChild>
-                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
+                <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
               </Button>
             </div>
           </nav>

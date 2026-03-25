@@ -22,7 +22,7 @@ const MediaFloatingCTA = () => {
       <div className="bg-[#1a1a30]/95 backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-3 flex items-center gap-4 shadow-2xl shadow-purple-900/30">
         <span className="text-white/70 text-sm hidden sm:block">🔥 Limited Q2 spots available</span>
         <Button size="sm" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg" asChild>
-          <Link to="/media/contact">
+          <Link to="/media/services">
             Get Free Audit <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
         </Button>

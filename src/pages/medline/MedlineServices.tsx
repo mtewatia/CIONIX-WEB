@@ -7,7 +7,6 @@ import { FileText, DollarSign, Shield, ClipboardList, Stethoscope, Database, Arr
 const navLinks = [
   { name: "Home", href: "/medline" },
   { name: "Services", href: "/medline/services" },
-  { name: "Contact", href: "/medline/contact" },
 ];
 
 const services = [

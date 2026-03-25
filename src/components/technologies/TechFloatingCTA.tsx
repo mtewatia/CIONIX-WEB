@@ -24,7 +24,7 @@ const TechFloatingCTA = () => {
           Limited Q2 spots available
         </p>
         <Button size="sm" className="btn-ryse rounded-full px-5 py-2 text-sm" asChild>
-          <Link to="/technologies/contact">
+          <a href="mailto:tech@cionix.com">
             Book Free Call
             <ArrowRight className="ml-1.5 h-4 w-4" />
           </Link>

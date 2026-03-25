@@ -152,7 +152,7 @@ const TechnologiesServices = () => {
             Every business is unique. Let's build technology that fits yours perfectly.
           </p>
           <Button size="lg" asChild>
-            <Link to="/technologies/contact">Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:tech@cionix.com">Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>

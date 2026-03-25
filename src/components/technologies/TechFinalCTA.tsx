@@ -17,13 +17,13 @@ const TechFinalCTA = () => (
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <Button size="lg" className="btn-ryse rounded-full px-8 py-6 text-base" asChild>
-          <Link to="/technologies/contact">
+          <a href="mailto:tech@cionix.com">
             Book Free Consultation
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          </a>
         </Button>
         <Button size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-base backdrop-blur-sm transition-all duration-300" asChild>
-          <Link to="/technologies/contact">
+          <a href="mailto:tech@cionix.com">
             <MessageSquare className="mr-2 h-5 w-5" />
             Talk to Our Experts
           </Link>

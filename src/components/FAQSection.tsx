@@ -49,10 +49,10 @@ const FAQSection = () => {
               Everything you need to know about working with CIONIX. Can't find what you're looking for? Reach out to our team.
             </p>
             <Button asChild>
-              <Link to="/pricing">
+              <a href="mailto:info@cionix.com">
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
 

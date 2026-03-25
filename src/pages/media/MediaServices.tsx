@@ -125,7 +125,7 @@ const MediaServices = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Ready to Elevate Your Media Presence?</h2>
           <p className="text-white/70 text-lg mb-8">Get a free consultation and discover how CIONIX Media can transform your digital content strategy.</p>
           <Button size="lg" className="bg-white text-purple-900 hover:bg-white/90" asChild>
-            <Link to="/media/contact">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:media@cionix.com">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>

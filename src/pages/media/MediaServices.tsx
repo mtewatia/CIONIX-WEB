@@ -17,7 +17,6 @@ const navLinks = [
     ],
   },
   { name: "Blog", href: "/media/blog" },
-  { name: "Contact", href: "/media/contact" },
 ];
 
 const services = [
@@ -72,7 +71,7 @@ const MediaServices = () => {
         sectorName="Media"
         sectorColor="from-purple-500 to-pink-500"
         navLinks={navLinks}
-        contactHref="/media/contact"
+        contactHref="/media/services"
         homePath="/media"
       />
 
@@ -101,7 +100,7 @@ const MediaServices = () => {
                 <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">{service.title}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{service.description}</p>
                 <Button asChild>
-                  <Link to="/media/contact">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <a href="mailto:media@cionix.com">Get Started <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
               </div>
               <div className={`bg-muted/50 rounded-2xl p-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
@@ -126,7 +125,7 @@ const MediaServices = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Ready to Elevate Your Media Presence?</h2>
           <p className="text-white/70 text-lg mb-8">Get a free consultation and discover how CIONIX Media can transform your digital content strategy.</p>
           <Button size="lg" className="bg-white text-purple-900 hover:bg-white/90" asChild>
-            <Link to="/media/contact">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:media@cionix.com">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>
@@ -143,7 +142,6 @@ const MediaServices = () => {
         quickLinks={[
           { name: "Home", href: "/media" },
           { name: "Services", href: "/media/services" },
-          { name: "Contact", href: "/media/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="media@cionix.com"

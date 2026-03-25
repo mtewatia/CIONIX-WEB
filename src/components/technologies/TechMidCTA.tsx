@@ -19,10 +19,10 @@ const TechMidCTA = () => (
           </div>
         </div>
         <Button size="lg" className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90 rounded-full px-8 py-6 text-base font-bold shadow-xl shrink-0" asChild>
-          <Link to="/technologies/contact">
+          <a href="mailto:tech@cionix.com">
             Claim Your Free Call
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          </a>
         </Button>
       </div>
     </div>

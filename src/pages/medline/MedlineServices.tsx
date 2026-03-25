@@ -7,7 +7,6 @@ import { FileText, DollarSign, Shield, ClipboardList, Stethoscope, Database, Arr
 const navLinks = [
   { name: "Home", href: "/medline" },
   { name: "Services", href: "/medline/services" },
-  { name: "Contact", href: "/medline/contact" },
 ];
 
 const services = [
@@ -58,7 +57,7 @@ const services = [
 const MedlineServices = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/contact" homePath="/medline" />
+      <SectorHeader sectorName="Medline" sectorColor="from-emerald-500 to-teal-500" navLinks={navLinks} contactHref="/medline/services" homePath="/medline" />
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
         <div className="container-custom text-center">
@@ -81,7 +80,7 @@ const MedlineServices = () => {
                 <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">{service.title}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{service.description}</p>
                 <Button asChild>
-                  <Link to="/medline/contact">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <a href="mailto:medline@cionix.com">Get Started <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
               </div>
               <div className={`bg-muted/50 rounded-2xl p-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
@@ -105,12 +104,12 @@ const MedlineServices = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Ready to Optimize Your Revenue Cycle?</h2>
           <p className="text-white/70 text-lg mb-8">Schedule a free assessment and discover how we can increase your practice's revenue.</p>
           <Button size="lg" className="bg-white text-emerald-900 hover:bg-white/90" asChild>
-            <Link to="/medline/contact">Schedule Free Assessment <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:medline@cionix.com">Schedule Free Assessment <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>
 
-      <SectorFooter sectorName="Medline" description="CIONIX Medline provides specialized medical billing and healthcare revenue solutions." serviceLinks={[{ name: "Medical Billing", href: "/medline/services" }, { name: "Revenue Cycle Mgmt", href: "/medline/services" }, { name: "Compliance", href: "/medline/services" }]} quickLinks={[{ name: "Home", href: "/medline" }, { name: "Services", href: "/medline/services" }, { name: "Contact", href: "/medline/contact" }, { name: "Main Site", href: "/" }]} email="medline@cionix.com" phone="+1 (555) 345-6789" location="Dubai, UAE" />
+      <SectorFooter sectorName="Medline" description="CIONIX Medline provides specialized medical billing and healthcare revenue solutions." serviceLinks={[{ name: "Medical Billing", href: "/medline/services" }, { name: "Revenue Cycle Mgmt", href: "/medline/services" }, { name: "Compliance", href: "/medline/services" }]} quickLinks={[{ name: "Home", href: "/medline" }, { name: "Services", href: "/medline/services" }, { name: "Main Site", href: "/" }]} email="medline@cionix.com" phone="+1 (555) 345-6789" location="Dubai, UAE" />
     </div>
   );
 };

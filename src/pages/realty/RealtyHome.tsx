@@ -10,7 +10,6 @@ const navLinks = [
   { name: "Home", href: "/realty" },
   { name: "Services", href: "/realty/services" },
   { name: "Blog", href: "/realty/blog" },
-  { name: "Contact", href: "/realty/contact" },
 ];
 
 const stats = [
@@ -50,7 +49,7 @@ const services = [
 const RealtyHome = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/contact" homePath="/realty" headerBg="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" />
+      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/services" homePath="/realty" headerBg="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900" />
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -72,7 +71,7 @@ const RealtyHome = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white" asChild>
-                  <Link to="/realty/contact">Book Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                  <a href="mailto:realty@cionix.com">Book Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
                   <Link to="/realty/services">Our Services</Link>
@@ -170,7 +169,7 @@ const RealtyHome = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Find Your Perfect Property Today</h2>
           <p className="text-white/70 text-lg mb-8">Whether you're buying, selling, or investing—our experts are ready to guide you every step of the way.</p>
           <Button size="lg" className="bg-white text-blue-900 hover:bg-white/90" asChild>
-            <Link to="/realty/contact">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:realty@cionix.com">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>
@@ -189,7 +188,6 @@ const RealtyHome = () => {
         quickLinks={[
           { name: "Home", href: "/realty" },
           { name: "Services", href: "/realty/services" },
-          { name: "Contact", href: "/realty/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="realty@cionix.com"

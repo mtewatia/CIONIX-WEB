@@ -19,7 +19,6 @@ const navLinks = [
     ],
   },
   { name: "Blog", href: "/technologies/blog" },
-  { name: "Contact", href: "/technologies/contact" },
 ];
 
 const allServices = [
@@ -86,7 +85,7 @@ const TechnologiesServices = () => {
         sectorName="Technologies"
         sectorColor="from-primary to-orange-400"
         navLinks={navLinks}
-        contactHref="/technologies/contact"
+        contactHref="/technologies/services"
         homePath="/technologies"
       />
 
@@ -123,7 +122,7 @@ const TechnologiesServices = () => {
                   <h3 className="text-2xl md:text-3xl font-bold font-heading mb-4 text-foreground">{service.title}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
                   <Button asChild>
-                    <Link to="/technologies/contact">Discuss This Service <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <a href="mailto:tech@cionix.com">Discuss This Service <ArrowRight className="ml-2 h-4 w-4" /></a>
                   </Button>
                 </div>
                 <div className={`bg-muted/50 rounded-2xl p-8 ${i % 2 !== 0 ? "lg:col-start-1" : ""}`}>
@@ -153,7 +152,7 @@ const TechnologiesServices = () => {
             Every business is unique. Let's build technology that fits yours perfectly.
           </p>
           <Button size="lg" asChild>
-            <Link to="/technologies/contact">Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:tech@cionix.com">Get a Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>
@@ -172,7 +171,6 @@ const TechnologiesServices = () => {
         quickLinks={[
           { name: "Home", href: "/technologies" },
           { name: "Services", href: "/technologies/services" },
-          { name: "Contact", href: "/technologies/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="tech@cionix.com"

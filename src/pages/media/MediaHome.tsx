@@ -26,7 +26,6 @@ const navLinks = [
     ],
   },
   { name: "Blog", href: "/media/blog" },
-  { name: "Contact", href: "/media/contact" },
 ];
 
 const MediaHome = () => {
@@ -36,7 +35,7 @@ const MediaHome = () => {
         sectorName="Media"
         sectorColor="from-purple-500 to-pink-500"
         navLinks={navLinks}
-        contactHref="/media/contact"
+        contactHref="/media/services"
         homePath="/media"
         headerBg="bg-[#0a0a1a]"
       />
@@ -72,7 +71,6 @@ const MediaHome = () => {
         quickLinks={[
           { name: "Home", href: "/media" },
           { name: "Services", href: "/media/services" },
-          { name: "Contact", href: "/media/contact" },
           { name: "Main Site", href: "/" },
         ]}
         email="media@cionix.com"

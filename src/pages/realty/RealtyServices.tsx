@@ -7,7 +7,6 @@ import { Home, Building2, TrendingUp, Landmark, MapPin, FileSearch, ArrowRight, 
 const navLinks = [
   { name: "Home", href: "/realty" },
   { name: "Services", href: "/realty/services" },
-  { name: "Contact", href: "/realty/contact" },
 ];
 
 const services = [
@@ -58,7 +57,7 @@ const services = [
 const RealtyServices = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/contact" homePath="/realty" />
+      <SectorHeader sectorName="Realty" sectorColor="from-blue-500 to-indigo-600" navLinks={navLinks} contactHref="/realty/services" homePath="/realty" />
 
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="container-custom text-center">
@@ -81,7 +80,7 @@ const RealtyServices = () => {
                 <h2 className="text-3xl font-bold font-heading mb-4 text-foreground">{service.title}</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">{service.description}</p>
                 <Button asChild>
-                  <Link to="/realty/contact">Get Started <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <a href="mailto:realty@cionix.com">Get Started <ArrowRight className="ml-2 h-4 w-4" /></a>
                 </Button>
               </div>
               <div className={`bg-muted/50 rounded-2xl p-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
@@ -105,12 +104,12 @@ const RealtyServices = () => {
           <h2 className="text-4xl font-bold font-heading mb-6">Ready to Invest in Real Estate?</h2>
           <p className="text-white/70 text-lg mb-8">Get personalized property recommendations and investment insights from our expert advisors.</p>
           <Button size="lg" className="bg-white text-blue-900 hover:bg-white/90" asChild>
-            <Link to="/realty/contact">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <a href="mailto:realty@cionix.com">Book Free Consultation <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
         </div>
       </section>
 
-      <SectorFooter sectorName="Realty" description="CIONIX Realty offers expert real estate advisory and investment consulting." serviceLinks={[{ name: "Residential", href: "/realty/services" }, { name: "Commercial", href: "/realty/services" }, { name: "Investment", href: "/realty/services" }]} quickLinks={[{ name: "Home", href: "/realty" }, { name: "Services", href: "/realty/services" }, { name: "Contact", href: "/realty/contact" }, { name: "Main Site", href: "/" }]} email="realty@cionix.com" phone="+1 (555) 456-7890" location="Dubai, UAE" />
+      <SectorFooter sectorName="Realty" description="CIONIX Realty offers expert real estate advisory and investment consulting." serviceLinks={[{ name: "Residential", href: "/realty/services" }, { name: "Commercial", href: "/realty/services" }, { name: "Investment", href: "/realty/services" }]} quickLinks={[{ name: "Home", href: "/realty" }, { name: "Services", href: "/realty/services" }, { name: "Main Site", href: "/" }]} email="realty@cionix.com" phone="+1 (555) 456-7890" location="Dubai, UAE" />
     </div>
   );
 };
